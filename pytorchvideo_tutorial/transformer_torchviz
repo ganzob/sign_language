@@ -1,0 +1,5180 @@
+digraph {
+	graph [size="419.25,419.25"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	140425088732512 [label="
+ (1, 400)" fillcolor=darkolivegreen1]
+	140425088803072 -> 140425088742480 [dir=none]
+	140425088742480 [label="mat1
+ (1, 768)" fillcolor=orange]
+	140425088803072 -> 140425088790832 [dir=none]
+	140425088790832 [label="mat2
+ (768, 400)" fillcolor=orange]
+	140425088803072 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :       (1, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 400)
+mat2_strides:       (1, 768)"]
+	140425088803168 -> 140425088803072
+	140424875482224 [label="classifier.bias
+ (400)" fillcolor=lightblue]
+	140424875482224 -> 140425088803168
+	140425088803168 [label=AccumulateGrad]
+	140425088805568 -> 140425088803072
+	140425088805568 -> 140424875482064 [dir=none]
+	140424875482064 [label="bias
+ (768)" fillcolor=orange]
+	140425088805568 -> 140425088790592 [dir=none]
+	140425088790592 [label="input
+ (1, 768)" fillcolor=orange]
+	140425088805568 -> 140425093116688 [dir=none]
+	140425093116688 [label="result1
+ (1, 1)" fillcolor=orange]
+	140425088805568 -> 140425088731392 [dir=none]
+	140425088731392 [label="result2
+ (1, 1)" fillcolor=orange]
+	140425088805568 -> 140424875481984 [dir=none]
+	140424875481984 [label="weight
+ (768)" fillcolor=orange]
+	140425088805568 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088804704 -> 140425088805568
+	140425088804704 [label="MeanBackward1
+--------------------------
+dim       :           (1,)
+keepdim   :          False
+self_sizes: (1, 1568, 768)"]
+	140425088804656 -> 140425088804704
+	140425088804656 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088805616 -> 140425088804656
+	140425088805616 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088803984 -> 140425088805616
+	140425088803984 -> 140425088731232 [dir=none]
+	140425088731232 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140425088803984 -> 140425088731312 [dir=none]
+	140425088731312 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140425088803984 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140425088804560 -> 140425088803984
+	140424875481584 [label="videomae.encoder.layer.11.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424875481584 -> 140425088804560
+	140425088804560 [label=AccumulateGrad]
+	140425088804944 -> 140425088803984
+	140425088804944 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140425090291936 -> 140425088804944
+	140425090291936 -> 140425088731952 [dir=none]
+	140425088731952 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140425090291936 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140425090288848 -> 140425090291936
+	140425090288848 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140425091186544 -> 140425090288848
+	140425091186544 -> 140425088731152 [dir=none]
+	140425088731152 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425091186544 -> 140425088730752 [dir=none]
+	140425088730752 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140425091186544 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140425089062656 -> 140425091186544
+	140424875481424 [label="videomae.encoder.layer.11.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424875481424 -> 140425089062656
+	140425089062656 [label=AccumulateGrad]
+	140425089061648 -> 140425091186544
+	140425089061648 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425089063424 -> 140425089061648
+	140425089063424 -> 140424875481904 [dir=none]
+	140424875481904 [label="bias
+ (768)" fillcolor=orange]
+	140425089063424 -> 140425088745280 [dir=none]
+	140425088745280 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425089063424 -> 140425088730592 [dir=none]
+	140425088730592 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425089063424 -> 140425088730992 [dir=none]
+	140425088730992 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425089063424 -> 140424875481824 [dir=none]
+	140424875481824 [label="weight
+ (768)" fillcolor=orange]
+	140425089063424 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088805760 -> 140425089063424
+	140425088805760 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088811216 -> 140425088805760
+	140425088811216 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088811168 -> 140425088811216
+	140425088811168 -> 140425088731072 [dir=none]
+	140425088731072 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088811168 -> 140425088730672 [dir=none]
+	140425088730672 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088811168 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088811360 -> 140425088811168
+	140424875481264 [label="videomae.encoder.layer.11.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424875481264 -> 140425088811360
+	140425088811360 [label=AccumulateGrad]
+	140425088812464 -> 140425088811168
+	140425088812464 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088811552 -> 140425088812464
+	140425088811552 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140425088811600 -> 140425088811552
+	140425088811600 [label=CloneBackward0]
+	140425088812416 -> 140425088811600
+	140425088812416 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088811744 -> 140425088812416
+	140425088811744 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140425088812272 -> 140425088811744
+	140425088812272 -> 140425088730352 [dir=none]
+	140425088730352 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140425088812272 -> 140425088730432 [dir=none]
+	140425088730432 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140425088812272 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088812032 -> 140425088812272
+	140425088812032 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088813616 -> 140425088812032
+	140425088813616 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088812560 -> 140425088813616
+	140425088812560 -> 140425088730512 [dir=none]
+	140425088730512 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140425088812560 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140425088812656 -> 140425088812560
+	140425088812656 -> 140425088730832 [dir=none]
+	140425088730832 [label="other
+ ()" fillcolor=orange]
+	140425088812656 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140425088812752 -> 140425088812656
+	140425088812752 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140425088813568 -> 140425088812752
+	140425088813568 -> 140425088730912 [dir=none]
+	140425088730912 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140425088813568 -> 140425088730032 [dir=none]
+	140425088730032 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140425088813568 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088812992 -> 140425088813568
+	140425088812992 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088813136 -> 140425088812992
+	140425088813136 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088813328 -> 140425088813136
+	140425088813328 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088815056 -> 140425088813328
+	140425088815056 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088813808 -> 140425088815056
+	140425088813808 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088813952 -> 140425088813808
+	140425088813952 -> 140425088730272 [dir=none]
+	140425088730272 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088813952 -> 140425088729872 [dir=none]
+	140425088729872 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088813952 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088814384 -> 140425088813952
+	140424875481024 [label="videomae.encoder.layer.11.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424875481024 -> 140425088814384
+	140425088814384 [label=AccumulateGrad]
+	140425088814000 -> 140425088813952
+	140425088814000 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088814336 -> 140425088814000
+	140425088814336 -> 140424875481744 [dir=none]
+	140424875481744 [label="bias
+ (768)" fillcolor=orange]
+	140425088814336 -> 140425088745040 [dir=none]
+	140425088745040 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088814336 -> 140425088729792 [dir=none]
+	140425088729792 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088814336 -> 140425088730112 [dir=none]
+	140425088730112 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088814336 -> 140424875481664 [dir=none]
+	140424875481664 [label="weight
+ (768)" fillcolor=orange]
+	140425088814336 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088811264 -> 140425088814336
+	140425088811264 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088814816 -> 140425088811264
+	140425088814816 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088814912 -> 140425088814816
+	140425088814912 -> 140425088731632 [dir=none]
+	140425088731632 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140425088814912 -> 140425088729712 [dir=none]
+	140425088729712 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140425088814912 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140425091679424 -> 140425088814912
+	140424875480384 [label="videomae.encoder.layer.10.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424875480384 -> 140425091679424
+	140425091679424 [label=AccumulateGrad]
+	140425091680288 -> 140425088814912
+	140425091680288 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140420402204192 -> 140425091680288
+	140420402204192 -> 140425088741680 [dir=none]
+	140425088741680 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140420402204192 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424956611216 -> 140420402204192
+	140424956611216 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424956177568 -> 140424956611216
+	140424956177568 -> 140425088729392 [dir=none]
+	140425088729392 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424956177568 -> 140425088729472 [dir=none]
+	140425088729472 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424956177568 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424956248512 -> 140424956177568
+	140424875480224 [label="videomae.encoder.layer.10.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424875480224 -> 140424956248512
+	140424956248512 [label=AccumulateGrad]
+	140424956250816 -> 140424956177568
+	140424956250816 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424956252064 -> 140424956250816
+	140424956252064 -> 140424875480704 [dir=none]
+	140424875480704 [label="bias
+ (768)" fillcolor=orange]
+	140424956252064 -> 140425088741440 [dir=none]
+	140425088741440 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424956252064 -> 140425088729312 [dir=none]
+	140425088729312 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424956252064 -> 140425088729632 [dir=none]
+	140425088729632 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424956252064 -> 140424875480624 [dir=none]
+	140424875480624 [label="weight
+ (768)" fillcolor=orange]
+	140424956252064 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088814768 -> 140424956252064
+	140425088814768 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088835984 -> 140425088814768
+	140425088835984 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088836224 -> 140425088835984
+	140425088836224 -> 140425088729952 [dir=none]
+	140425088729952 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088836224 -> 140425088729152 [dir=none]
+	140425088729152 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088836224 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088836176 -> 140425088836224
+	140424875480064 [label="videomae.encoder.layer.10.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424875480064 -> 140425088836176
+	140425088836176 [label=AccumulateGrad]
+	140425088836128 -> 140425088836224
+	140425088836128 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088836464 -> 140425088836128
+	140425088836464 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140425088836608 -> 140425088836464
+	140425088836608 [label=CloneBackward0]
+	140425088836800 -> 140425088836608
+	140425088836800 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088838432 -> 140425088836800
+	140425088838432 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140425088837376 -> 140425088838432
+	140425088837376 -> 140425088729552 [dir=none]
+	140425088729552 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140425088837376 -> 140425088729232 [dir=none]
+	140425088729232 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140425088837376 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088837424 -> 140425088837376
+	140425088837424 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088837664 -> 140425088837424
+	140425088837664 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088838288 -> 140425088837664
+	140425088838288 -> 140425088730192 [dir=none]
+	140425088730192 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140425088838288 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140425088837808 -> 140425088838288
+	140425088837808 -> 140425089236720 [dir=none]
+	140425089236720 [label="other
+ ()" fillcolor=orange]
+	140425088837808 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140425088838240 -> 140425088837808
+	140425088838240 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140425088838000 -> 140425088838240
+	140425088838000 -> 140425089236240 [dir=none]
+	140425089236240 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140425088838000 -> 140425089236160 [dir=none]
+	140425089236160 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140425088838000 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088838192 -> 140425088838000
+	140425088838192 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088838768 -> 140425088838192
+	140425088838768 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088838720 -> 140425088838768
+	140425088838720 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088838912 -> 140425088838720
+	140425088838912 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088839344 -> 140425088838912
+	140425088839344 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088839296 -> 140425088839344
+	140425088839296 -> 140425089236800 [dir=none]
+	140425089236800 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088839296 -> 140425089236080 [dir=none]
+	140425089236080 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088839296 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088839536 -> 140425088839296
+	140424875479824 [label="videomae.encoder.layer.10.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424875479824 -> 140425088839536
+	140425088839536 [label=AccumulateGrad]
+	140425088839488 -> 140425088839296
+	140425088839488 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088851824 -> 140425088839488
+	140425088851824 -> 140424875480544 [dir=none]
+	140424875480544 [label="bias
+ (768)" fillcolor=orange]
+	140425088851824 -> 140425088744160 [dir=none]
+	140425088744160 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088851824 -> 140425089235840 [dir=none]
+	140425089235840 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088851824 -> 140425089236320 [dir=none]
+	140425089236320 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088851824 -> 140424875480464 [dir=none]
+	140424875480464 [label="weight
+ (768)" fillcolor=orange]
+	140425088851824 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088835840 -> 140425088851824
+	140425088835840 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088848176 -> 140425088835840
+	140425088848176 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088847984 -> 140425088848176
+	140425088847984 -> 140425089236560 [dir=none]
+	140425089236560 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140425088847984 -> 140425089235920 [dir=none]
+	140425089235920 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140425088847984 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140425088848272 -> 140425088847984
+	140424875479184 [label="videomae.encoder.layer.9.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424875479184 -> 140425088848272
+	140425088848272 [label=AccumulateGrad]
+	140425088849472 -> 140425088847984
+	140425088849472 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140425088848464 -> 140425088849472
+	140425088848464 -> 140425088742400 [dir=none]
+	140425088742400 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140425088848464 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140425088848512 -> 140425088848464
+	140425088848512 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140425088849328 -> 140425088848512
+	140425088849328 -> 140425089235520 [dir=none]
+	140425089235520 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088849328 -> 140425089235600 [dir=none]
+	140425089235600 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140425088849328 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140425088848752 -> 140425088849328
+	140424877367184 [label="videomae.encoder.layer.9.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877367184 -> 140425088848752
+	140425088848752 [label=AccumulateGrad]
+	140425088848848 -> 140425088849328
+	140425088848848 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088849280 -> 140425088848848
+	140425088849280 -> 140424875479504 [dir=none]
+	140424875479504 [label="bias
+ (768)" fillcolor=orange]
+	140425088849280 -> 140425088741920 [dir=none]
+	140425088741920 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088849280 -> 140425089235280 [dir=none]
+	140425089235280 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088849280 -> 140425089235760 [dir=none]
+	140425089235760 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088849280 -> 140424875479424 [dir=none]
+	140424875479424 [label="weight
+ (768)" fillcolor=orange]
+	140425088849280 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088848224 -> 140425088849280
+	140425088848224 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088849664 -> 140425088848224
+	140425088849664 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088849856 -> 140425088849664
+	140425088849856 -> 140425089236000 [dir=none]
+	140425089236000 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088849856 -> 140425089235360 [dir=none]
+	140425089235360 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088849856 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088850048 -> 140425088849856
+	140424877367024 [label="videomae.encoder.layer.9.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877367024 -> 140425088850048
+	140425088850048 [label=AccumulateGrad]
+	140425088850240 -> 140425088849856
+	140425088850240 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088850816 -> 140425088850240
+	140425088850816 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140425088850720 -> 140425088850816
+	140425088850720 [label=CloneBackward0]
+	140425088850576 -> 140425088850720
+	140425088850576 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088850672 -> 140425088850576
+	140425088850672 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140425088851152 -> 140425088850672
+	140425088851152 -> 140425089234960 [dir=none]
+	140425089234960 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140425088851152 -> 140425089235200 [dir=none]
+	140425089235200 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140425088851152 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088851104 -> 140425088851152
+	140425088851104 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875312320 -> 140425088851104
+	140424875312320 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875314864 -> 140424875312320
+	140424875314864 -> 140425089235120 [dir=none]
+	140425089235120 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875314864 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424919857472 -> 140424875314864
+	140424919857472 -> 140425089236480 [dir=none]
+	140425089236480 [label="other
+ ()" fillcolor=orange]
+	140424919857472 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424919856800 -> 140424919857472
+	140424919856800 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875433024 -> 140424919856800
+	140424875433024 -> 140425089235680 [dir=none]
+	140425089235680 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875433024 -> 140425089234480 [dir=none]
+	140425089234480 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875433024 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875432976 -> 140424875433024
+	140424875432976 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875433168 -> 140424875432976
+	140424875433168 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875433360 -> 140424875433168
+	140424875433360 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875433072 -> 140424875433360
+	140424875433072 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875432880 -> 140424875433072
+	140424875432880 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875433456 -> 140424875432880
+	140424875433456 -> 140425089235040 [dir=none]
+	140425089235040 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875433456 -> 140425089234400 [dir=none]
+	140425089234400 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875433456 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875433552 -> 140424875433456
+	140424877366784 [label="videomae.encoder.layer.9.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877366784 -> 140424875433552
+	140424875433552 [label=AccumulateGrad]
+	140424875433504 -> 140424875433456
+	140424875433504 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875433648 -> 140424875433504
+	140424875433648 -> 140424875479344 [dir=none]
+	140424875479344 [label="bias
+ (768)" fillcolor=orange]
+	140424875433648 -> 140425088744800 [dir=none]
+	140425088744800 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875433648 -> 140425089234240 [dir=none]
+	140425089234240 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875433648 -> 140425089234560 [dir=none]
+	140425089234560 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875433648 -> 140424875479264 [dir=none]
+	140424875479264 [label="weight
+ (768)" fillcolor=orange]
+	140424875433648 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088849520 -> 140424875433648
+	140425088849520 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875433936 -> 140425088849520
+	140424875433936 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875081936 -> 140424875433936
+	140424875081936 -> 140425089235440 [dir=none]
+	140425089235440 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875081936 -> 140425089234080 [dir=none]
+	140425089234080 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875081936 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875082032 -> 140424875081936
+	140424877366144 [label="videomae.encoder.layer.8.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877366144 -> 140424875082032
+	140424875082032 [label=AccumulateGrad]
+	140424875081984 -> 140424875081936
+	140424875081984 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875082128 -> 140424875081984
+	140424875082128 -> 140425088742960 [dir=none]
+	140425088742960 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875082128 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875082320 -> 140424875082128
+	140424875082320 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875082416 -> 140424875082320
+	140424875082416 -> 140425089233920 [dir=none]
+	140425089233920 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875082416 -> 140425089233360 [dir=none]
+	140425089233360 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875082416 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875082512 -> 140424875082416
+	140424877365984 [label="videomae.encoder.layer.8.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877365984 -> 140424875082512
+	140424875082512 [label=AccumulateGrad]
+	140424875082464 -> 140424875082416
+	140424875082464 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875082608 -> 140424875082464
+	140424875082608 -> 140424877366464 [dir=none]
+	140424877366464 [label="bias
+ (768)" fillcolor=orange]
+	140424875082608 -> 140425088742800 [dir=none]
+	140425088742800 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875082608 -> 140425089233760 [dir=none]
+	140425089233760 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875082608 -> 140425089234160 [dir=none]
+	140425089234160 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875082608 -> 140424877366384 [dir=none]
+	140424877366384 [label="weight
+ (768)" fillcolor=orange]
+	140424875082608 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875433888 -> 140424875082608
+	140424875433888 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875082944 -> 140424875433888
+	140424875082944 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875083088 -> 140424875082944
+	140424875083088 -> 140425089234320 [dir=none]
+	140425089234320 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875083088 -> 140425089233840 [dir=none]
+	140425089233840 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875083088 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875083184 -> 140424875083088
+	140424877365824 [label="videomae.encoder.layer.8.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877365824 -> 140424875083184
+	140424875083184 [label=AccumulateGrad]
+	140424875083136 -> 140424875083088
+	140424875083136 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875083280 -> 140424875083136
+	140424875083280 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875083472 -> 140424875083280
+	140424875083472 [label=CloneBackward0]
+	140424875083568 -> 140424875083472
+	140424875083568 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875083664 -> 140424875083568
+	140424875083664 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875083760 -> 140424875083664
+	140424875083760 -> 140425089233520 [dir=none]
+	140425089233520 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875083760 -> 140425089233600 [dir=none]
+	140425089233600 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875083760 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875083856 -> 140424875083760
+	140424875083856 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875084000 -> 140424875083856
+	140424875084000 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875084096 -> 140424875084000
+	140424875084096 -> 140425089233680 [dir=none]
+	140425089233680 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875084096 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875084192 -> 140424875084096
+	140424875084192 -> 140425089234640 [dir=none]
+	140425089234640 [label="other
+ ()" fillcolor=orange]
+	140424875084192 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875084288 -> 140424875084192
+	140424875084288 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875084384 -> 140424875084288
+	140424875084384 -> 140425089234000 [dir=none]
+	140425089234000 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875084384 -> 140425089233120 [dir=none]
+	140425089233120 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875084384 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875084480 -> 140424875084384
+	140424875084480 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875084624 -> 140424875084480
+	140424875084624 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875084720 -> 140424875084624
+	140424875084720 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875084816 -> 140424875084720
+	140424875084816 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875084912 -> 140424875084816
+	140424875084912 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875085008 -> 140424875084912
+	140424875085008 -> 140425089233440 [dir=none]
+	140425089233440 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875085008 -> 140425089233040 [dir=none]
+	140425089233040 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875085008 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875085104 -> 140424875085008
+	140424877365584 [label="videomae.encoder.layer.8.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877365584 -> 140424875085104
+	140424875085104 [label=AccumulateGrad]
+	140424875085056 -> 140424875085008
+	140424875085056 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875085200 -> 140424875085056
+	140424875085200 -> 140424877366304 [dir=none]
+	140424877366304 [label="bias
+ (768)" fillcolor=orange]
+	140424875085200 -> 140425088745120 [dir=none]
+	140425088745120 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875085200 -> 140425089233280 [dir=none]
+	140425089233280 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875085200 -> 140425089233200 [dir=none]
+	140425089233200 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875085200 -> 140424877366224 [dir=none]
+	140424877366224 [label="weight
+ (768)" fillcolor=orange]
+	140424875085200 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875082896 -> 140424875085200
+	140424875082896 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875085536 -> 140424875082896
+	140424875085536 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875085680 -> 140424875085536
+	140424875085680 -> 140425089232960 [dir=none]
+	140425089232960 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875085680 -> 140425089210384 [dir=none]
+	140425089210384 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875085680 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875085776 -> 140424875085680
+	140424877364944 [label="videomae.encoder.layer.7.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877364944 -> 140424875085776
+	140424875085776 [label=AccumulateGrad]
+	140424875085728 -> 140424875085680
+	140424875085728 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875122800 -> 140424875085728
+	140424875122800 -> 140425088743920 [dir=none]
+	140425088743920 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875122800 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875122992 -> 140424875122800
+	140424875122992 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875123088 -> 140424875122992
+	140424875123088 -> 140425089211664 [dir=none]
+	140425089211664 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875123088 -> 140425089209024 [dir=none]
+	140425089209024 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875123088 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875123184 -> 140424875123088
+	140424877364784 [label="videomae.encoder.layer.7.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877364784 -> 140424875123184
+	140424875123184 [label=AccumulateGrad]
+	140424875123136 -> 140424875123088
+	140424875123136 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875123280 -> 140424875123136
+	140424875123280 -> 140424877365264 [dir=none]
+	140424877365264 [label="bias
+ (768)" fillcolor=orange]
+	140424875123280 -> 140425088743680 [dir=none]
+	140425088743680 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875123280 -> 140425089211344 [dir=none]
+	140425089211344 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875123280 -> 140425089211984 [dir=none]
+	140425089211984 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875123280 -> 140424877365184 [dir=none]
+	140424877365184 [label="weight
+ (768)" fillcolor=orange]
+	140424875123280 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875085488 -> 140424875123280
+	140424875085488 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875123616 -> 140424875085488
+	140424875123616 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875123760 -> 140424875123616
+	140424875123760 -> 140425089209584 [dir=none]
+	140425089209584 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875123760 -> 140425089212064 [dir=none]
+	140425089212064 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875123760 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875123856 -> 140424875123760
+	140424877364624 [label="videomae.encoder.layer.7.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877364624 -> 140424875123856
+	140424875123856 [label=AccumulateGrad]
+	140424875123808 -> 140424875123760
+	140424875123808 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875123952 -> 140424875123808
+	140424875123952 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875124144 -> 140424875123952
+	140424875124144 [label=CloneBackward0]
+	140424875124240 -> 140424875124144
+	140424875124240 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875124336 -> 140424875124240
+	140424875124336 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875124432 -> 140424875124336
+	140424875124432 -> 140425854230832 [dir=none]
+	140425854230832 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875124432 -> 140425088863504 [dir=none]
+	140425088863504 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875124432 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875124528 -> 140424875124432
+	140424875124528 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875124672 -> 140424875124528
+	140424875124672 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875124768 -> 140424875124672
+	140424875124768 -> 140425088863424 [dir=none]
+	140425088863424 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875124768 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875124864 -> 140424875124768
+	140424875124864 -> 140425089211184 [dir=none]
+	140425089211184 [label="other
+ ()" fillcolor=orange]
+	140424875124864 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875124960 -> 140424875124864
+	140424875124960 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875125056 -> 140424875124960
+	140424875125056 -> 140425089211264 [dir=none]
+	140425089211264 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875125056 -> 140425089212304 [dir=none]
+	140425089212304 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875125056 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875125152 -> 140424875125056
+	140424875125152 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875125296 -> 140424875125152
+	140424875125296 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875125392 -> 140424875125296
+	140424875125392 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875125488 -> 140424875125392
+	140424875125488 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125584 -> 140424875125488
+	140424875125584 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875125680 -> 140424875125584
+	140424875125680 -> 140425089211584 [dir=none]
+	140425089211584 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875125680 -> 140425089212224 [dir=none]
+	140425089212224 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875125680 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875125776 -> 140424875125680
+	140424877364384 [label="videomae.encoder.layer.7.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877364384 -> 140424875125776
+	140424875125776 [label=AccumulateGrad]
+	140424875125728 -> 140424875125680
+	140424875125728 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125872 -> 140424875125728
+	140424875125872 -> 140424877365104 [dir=none]
+	140424877365104 [label="bias
+ (768)" fillcolor=orange]
+	140424875125872 -> 140425088744880 [dir=none]
+	140425088744880 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875125872 -> 140425088036928 [dir=none]
+	140425088036928 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875125872 -> 140425088037008 [dir=none]
+	140425088037008 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875125872 -> 140424877365024 [dir=none]
+	140424877365024 [label="weight
+ (768)" fillcolor=orange]
+	140424875125872 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875123568 -> 140424875125872
+	140424875123568 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875126208 -> 140424875123568
+	140424875126208 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875126352 -> 140424875126208
+	140424875126352 -> 140425088037168 [dir=none]
+	140425088037168 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875126352 -> 140425088037088 [dir=none]
+	140425088037088 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875126352 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875126448 -> 140424875126352
+	140424877363744 [label="videomae.encoder.layer.6.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877363744 -> 140424875126448
+	140424875126448 [label=AccumulateGrad]
+	140424875126400 -> 140424875126352
+	140424875126400 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875126544 -> 140424875126400
+	140424875126544 -> 140425088744720 [dir=none]
+	140425088744720 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875126544 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875126736 -> 140424875126544
+	140424875126736 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875126640 -> 140424875126736
+	140424875126640 -> 140425089210544 [dir=none]
+	140425089210544 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875126640 -> 140425089212144 [dir=none]
+	140425089212144 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875126640 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875114704 -> 140424875126640
+	140424877363584 [label="videomae.encoder.layer.6.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877363584 -> 140424875114704
+	140424875114704 [label=AccumulateGrad]
+	140424875114656 -> 140424875126640
+	140424875114656 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875114800 -> 140424875114656
+	140424875114800 -> 140424877364064 [dir=none]
+	140424877364064 [label="bias
+ (768)" fillcolor=orange]
+	140424875114800 -> 140425088744400 [dir=none]
+	140425088744400 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875114800 -> 140425088462416 [dir=none]
+	140425088462416 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875114800 -> 140425088462656 [dir=none]
+	140425088462656 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875114800 -> 140424877363984 [dir=none]
+	140424877363984 [label="weight
+ (768)" fillcolor=orange]
+	140424875114800 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875126160 -> 140424875114800
+	140424875126160 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875115136 -> 140424875126160
+	140424875115136 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875115280 -> 140424875115136
+	140424875115280 -> 140425088462736 [dir=none]
+	140425088462736 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875115280 -> 140425088462336 [dir=none]
+	140425088462336 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875115280 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875115376 -> 140424875115280
+	140424877363424 [label="videomae.encoder.layer.6.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877363424 -> 140424875115376
+	140424875115376 [label=AccumulateGrad]
+	140424875115328 -> 140424875115280
+	140424875115328 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875115472 -> 140424875115328
+	140424875115472 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875115664 -> 140424875115472
+	140424875115664 [label=CloneBackward0]
+	140424875115760 -> 140424875115664
+	140424875115760 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875115856 -> 140424875115760
+	140424875115856 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875115952 -> 140424875115856
+	140424875115952 -> 140425088462016 [dir=none]
+	140425088462016 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875115952 -> 140425088462096 [dir=none]
+	140425088462096 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875115952 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875116048 -> 140424875115952
+	140424875116048 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875116192 -> 140424875116048
+	140424875116192 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875116288 -> 140424875116192
+	140424875116288 -> 140425088462256 [dir=none]
+	140425088462256 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875116288 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875116384 -> 140424875116288
+	140424875116384 -> 140425088462576 [dir=none]
+	140425088462576 [label="other
+ ()" fillcolor=orange]
+	140424875116384 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875116480 -> 140424875116384
+	140424875116480 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875116576 -> 140424875116480
+	140424875116576 -> 140425088462176 [dir=none]
+	140425088462176 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875116576 -> 140425088461696 [dir=none]
+	140425088461696 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875116576 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875432640 -> 140424875116576
+	140424875432640 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425092221344 -> 140424875432640
+	140425092221344 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875200368 -> 140425092221344
+	140424875200368 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875200272 -> 140424875200368
+	140424875200272 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875200176 -> 140424875200272
+	140424875200176 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875200080 -> 140424875200176
+	140424875200080 -> 140425092390640 [dir=none]
+	140425092390640 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875200080 -> 140425088732672 [dir=none]
+	140425088732672 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875200080 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875199984 -> 140424875200080
+	140424877170576 [label="videomae.encoder.layer.6.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877170576 -> 140424875199984
+	140424875199984 [label=AccumulateGrad]
+	140424875200032 -> 140424875200080
+	140424875200032 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875199888 -> 140424875200032
+	140424875199888 -> 140424877363904 [dir=none]
+	140424877363904 [label="bias
+ (768)" fillcolor=orange]
+	140424875199888 -> 140425088758944 [dir=none]
+	140425088758944 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875199888 -> 140425088732752 [dir=none]
+	140425088732752 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875199888 -> 140425089096096 [dir=none]
+	140425089096096 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875199888 -> 140424877363824 [dir=none]
+	140424877363824 [label="weight
+ (768)" fillcolor=orange]
+	140424875199888 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875115088 -> 140424875199888
+	140424875115088 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875199552 -> 140424875115088
+	140424875199552 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875199408 -> 140424875199552
+	140424875199408 -> 140425089096016 [dir=none]
+	140425089096016 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875199408 -> 140425089097616 [dir=none]
+	140425089097616 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875199408 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875199312 -> 140424875199408
+	140424877169936 [label="videomae.encoder.layer.5.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877169936 -> 140424875199312
+	140424875199312 [label=AccumulateGrad]
+	140424875199360 -> 140424875199408
+	140424875199360 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875199216 -> 140424875199360
+	140424875199216 -> 140425088760064 [dir=none]
+	140425088760064 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875199216 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875199024 -> 140424875199216
+	140424875199024 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875198928 -> 140424875199024
+	140424875198928 -> 140425089096496 [dir=none]
+	140425089096496 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875198928 -> 140425089096256 [dir=none]
+	140425089096256 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875198928 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875198784 -> 140424875198928
+	140424877169776 [label="videomae.encoder.layer.5.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877169776 -> 140424875198784
+	140424875198784 [label=AccumulateGrad]
+	140424875198832 -> 140424875198928
+	140424875198832 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875198688 -> 140424875198832
+	140424875198688 -> 140424877170256 [dir=none]
+	140424877170256 [label="bias
+ (768)" fillcolor=orange]
+	140424875198688 -> 140425088758384 [dir=none]
+	140425088758384 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875198688 -> 140424956600208 [dir=none]
+	140424956600208 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875198688 -> 140425089095696 [dir=none]
+	140425089095696 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875198688 -> 140424877170176 [dir=none]
+	140424877170176 [label="weight
+ (768)" fillcolor=orange]
+	140424875198688 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875199600 -> 140424875198688
+	140424875199600 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875198256 -> 140424875199600
+	140424875198256 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875198112 -> 140424875198256
+	140424875198112 -> 140425089096336 [dir=none]
+	140425089096336 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875198112 -> 140425089096416 [dir=none]
+	140425089096416 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875198112 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875198016 -> 140424875198112
+	140424877169616 [label="videomae.encoder.layer.5.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877169616 -> 140424875198016
+	140424875198016 [label=AccumulateGrad]
+	140424875198064 -> 140424875198112
+	140424875198064 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875197872 -> 140424875198064
+	140424875197872 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875197584 -> 140424875197872
+	140424875197584 [label=CloneBackward0]
+	140424875197488 -> 140424875197584
+	140424875197488 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875197344 -> 140424875197488
+	140424875197344 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875197248 -> 140424875197344
+	140424875197248 -> 140425089095776 [dir=none]
+	140425089095776 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875197248 -> 140425089096176 [dir=none]
+	140425089096176 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875197248 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875197008 -> 140424875197248
+	140424875197008 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875196864 -> 140424875197008
+	140424875196864 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875196768 -> 140424875196864
+	140424875196768 -> 140425089095936 [dir=none]
+	140425089095936 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875196768 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875196672 -> 140424875196768
+	140424875196672 -> 140425089096736 [dir=none]
+	140425089096736 [label="other
+ ()" fillcolor=orange]
+	140424875196672 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875196528 -> 140424875196672
+	140424875196528 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875196480 -> 140424875196528
+	140424875196480 -> 140425089095856 [dir=none]
+	140425089095856 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875196480 -> 140425089096576 [dir=none]
+	140425089096576 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875196480 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875196272 -> 140424875196480
+	140424875196272 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875196128 -> 140424875196272
+	140424875196128 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875196032 -> 140424875196128
+	140424875196032 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875195936 -> 140424875196032
+	140424875195936 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875195840 -> 140424875195936
+	140424875195840 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875195744 -> 140424875195840
+	140424875195744 -> 140424876709584 [dir=none]
+	140424876709584 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875195744 -> 140424876709424 [dir=none]
+	140424876709424 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875195744 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875195696 -> 140424875195744
+	140424877169376 [label="videomae.encoder.layer.5.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877169376 -> 140424875195696
+	140424875195696 [label=AccumulateGrad]
+	140424875195648 -> 140424875195744
+	140424875195648 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875195552 -> 140424875195648
+	140424875195552 -> 140424877170096 [dir=none]
+	140424877170096 [label="bias
+ (768)" fillcolor=orange]
+	140424875195552 -> 140425088759664 [dir=none]
+	140425088759664 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875195552 -> 140424876709024 [dir=none]
+	140424876709024 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875195552 -> 140424876708464 [dir=none]
+	140424876708464 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875195552 -> 140424877170016 [dir=none]
+	140424877170016 [label="weight
+ (768)" fillcolor=orange]
+	140424875195552 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875198352 -> 140424875195552
+	140424875198352 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875195216 -> 140424875198352
+	140424875195216 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875195024 -> 140424875195216
+	140424875195024 -> 140424876707904 [dir=none]
+	140424876707904 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875195024 -> 140424876708384 [dir=none]
+	140424876708384 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875195024 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875194928 -> 140424875195024
+	140424877168736 [label="videomae.encoder.layer.4.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877168736 -> 140424875194928
+	140424875194928 [label=AccumulateGrad]
+	140424875194976 -> 140424875195024
+	140424875194976 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875194832 -> 140424875194976
+	140424875194832 -> 140425088758784 [dir=none]
+	140425088758784 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875194832 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875194592 -> 140424875194832
+	140424875194592 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875194496 -> 140424875194592
+	140424875194496 -> 140424876707984 [dir=none]
+	140424876707984 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875194496 -> 140424876708624 [dir=none]
+	140424876708624 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875194496 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875194400 -> 140424875194496
+	140424877168576 [label="videomae.encoder.layer.4.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877168576 -> 140424875194400
+	140424875194400 [label=AccumulateGrad]
+	140424875194448 -> 140424875194496
+	140424875194448 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875194304 -> 140424875194448
+	140424875194304 -> 140424877169056 [dir=none]
+	140424877169056 [label="bias
+ (768)" fillcolor=orange]
+	140424875194304 -> 140425088758544 [dir=none]
+	140425088758544 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875194304 -> 140424876708144 [dir=none]
+	140424876708144 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875194304 -> 140424876708224 [dir=none]
+	140424876708224 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875194304 -> 140424877168976 [dir=none]
+	140424877168976 [label="weight
+ (768)" fillcolor=orange]
+	140424875194304 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875195264 -> 140424875194304
+	140424875195264 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875193872 -> 140424875195264
+	140424875193872 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875193680 -> 140424875193872
+	140424875193680 -> 140424876709264 [dir=none]
+	140424876709264 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875193680 -> 140424876708304 [dir=none]
+	140424876708304 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875193680 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875193536 -> 140424875193680
+	140424877168416 [label="videomae.encoder.layer.4.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877168416 -> 140424875193536
+	140424875193536 [label=AccumulateGrad]
+	140424875193584 -> 140424875193680
+	140424875193584 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875193440 -> 140424875193584
+	140424875193440 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875193104 -> 140424875193440
+	140424875193104 [label=CloneBackward0]
+	140424875193008 -> 140424875193104
+	140424875193008 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875192912 -> 140424875193008
+	140424875192912 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875192816 -> 140424875192912
+	140424875192816 -> 140424876708784 [dir=none]
+	140424876708784 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875192816 -> 140424876709744 [dir=none]
+	140424876709744 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875192816 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875192720 -> 140424875192816
+	140424875192720 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875192528 -> 140424875192720
+	140424875192528 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875192432 -> 140424875192528
+	140424875192432 -> 140424876709664 [dir=none]
+	140424876709664 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875192432 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875192384 -> 140424875192432
+	140424875192384 -> 140424876708544 [dir=none]
+	140424876708544 [label="other
+ ()" fillcolor=orange]
+	140424875192384 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875315056 -> 140424875192384
+	140424875315056 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875314912 -> 140424875315056
+	140424875314912 -> 140424876708064 [dir=none]
+	140424876708064 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875314912 -> 140424876709184 [dir=none]
+	140424876709184 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875314912 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875314768 -> 140424875314912
+	140424875314768 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875314576 -> 140424875314768
+	140424875314576 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875314480 -> 140424875314576
+	140424875314480 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875314384 -> 140424875314480
+	140424875314384 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875314144 -> 140424875314384
+	140424875314144 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875314048 -> 140424875314144
+	140424875314048 -> 140424876708864 [dir=none]
+	140424876708864 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875314048 -> 140424876709824 [dir=none]
+	140424876709824 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875314048 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875314000 -> 140424875314048
+	140424877168176 [label="videomae.encoder.layer.4.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877168176 -> 140424875314000
+	140424875314000 [label=AccumulateGrad]
+	140424875313952 -> 140424875314048
+	140424875313952 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875313856 -> 140424875313952
+	140424875313856 -> 140424877168896 [dir=none]
+	140424877168896 [label="bias
+ (768)" fillcolor=orange]
+	140424875313856 -> 140425088760944 [dir=none]
+	140425088760944 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875313856 -> 140425089437840 [dir=none]
+	140425089437840 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875313856 -> 140425853329952 [dir=none]
+	140425853329952 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875313856 -> 140424877168816 [dir=none]
+	140424877168816 [label="weight
+ (768)" fillcolor=orange]
+	140424875313856 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875193920 -> 140424875313856
+	140424875193920 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875313520 -> 140424875193920
+	140424875313520 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875313376 -> 140424875313520
+	140424875313376 -> 140424876708944 [dir=none]
+	140424876708944 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875313376 -> 140424876709904 [dir=none]
+	140424876709904 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875313376 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875313280 -> 140424875313376
+	140424877167536 [label="videomae.encoder.layer.3.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877167536 -> 140424875313280
+	140424875313280 [label=AccumulateGrad]
+	140424875313328 -> 140424875313376
+	140424875313328 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875313184 -> 140424875313328
+	140424875313184 -> 140425088759424 [dir=none]
+	140425088759424 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875313184 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875312992 -> 140424875313184
+	140424875312992 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875312896 -> 140424875312992
+	140424875312896 -> 140425089208864 [dir=none]
+	140425089208864 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875312896 -> 140425089211424 [dir=none]
+	140425089211424 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875312896 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875312800 -> 140424875312896
+	140424877167376 [label="videomae.encoder.layer.3.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140424877167376 -> 140424875312800
+	140424875312800 [label=AccumulateGrad]
+	140424875312848 -> 140424875312896
+	140424875312848 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875312704 -> 140424875312848
+	140424875312704 -> 140424877167856 [dir=none]
+	140424877167856 [label="bias
+ (768)" fillcolor=orange]
+	140424875312704 -> 140425088759184 [dir=none]
+	140425088759184 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875312704 -> 140425089211824 [dir=none]
+	140425089211824 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875312704 -> 140424876709344 [dir=none]
+	140424876709344 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875312704 -> 140424877167776 [dir=none]
+	140424877167776 [label="weight
+ (768)" fillcolor=orange]
+	140424875312704 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875313568 -> 140424875312704
+	140424875313568 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875312368 -> 140424875313568
+	140424875312368 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875312176 -> 140424875312368
+	140424875312176 -> 140424876709104 [dir=none]
+	140424876709104 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875312176 -> 140424876709504 [dir=none]
+	140424876709504 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875312176 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875312080 -> 140424875312176
+	140424877167216 [label="videomae.encoder.layer.3.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140424877167216 -> 140424875312080
+	140424875312080 [label=AccumulateGrad]
+	140424875312128 -> 140424875312176
+	140424875312128 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875311936 -> 140424875312128
+	140424875311936 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875311696 -> 140424875311936
+	140424875311696 [label=CloneBackward0]
+	140424875311600 -> 140424875311696
+	140424875311600 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875311504 -> 140424875311600
+	140424875311504 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875311360 -> 140424875311504
+	140424875311360 -> 140424876708704 [dir=none]
+	140424876708704 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875311360 -> 140424876709984 [dir=none]
+	140424876709984 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875311360 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875311216 -> 140424875311360
+	140424875311216 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875175792 -> 140424875311216
+	140424875175792 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875175696 -> 140424875175792
+	140424875175696 -> 140425089198176 [dir=none]
+	140425089198176 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875175696 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875175600 -> 140424875175696
+	140424875175600 -> 140425089198336 [dir=none]
+	140425089198336 [label="other
+ ()" fillcolor=orange]
+	140424875175600 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875175504 -> 140424875175600
+	140424875175504 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875175408 -> 140424875175504
+	140424875175408 -> 140425089198656 [dir=none]
+	140425089198656 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875175408 -> 140425089198016 [dir=none]
+	140425089198016 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875175408 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875175312 -> 140424875175408
+	140424875175312 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875175168 -> 140424875175312
+	140424875175168 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875175072 -> 140424875175168
+	140424875175072 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875174976 -> 140424875175072
+	140424875174976 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875174832 -> 140424875174976
+	140424875174832 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875174736 -> 140424875174832
+	140424875174736 -> 140425089198816 [dir=none]
+	140425089198816 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875174736 -> 140425089198416 [dir=none]
+	140425089198416 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875174736 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875174640 -> 140424875174736
+	140424877166976 [label="videomae.encoder.layer.3.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140424877166976 -> 140424875174640
+	140424875174640 [label=AccumulateGrad]
+	140424875174688 -> 140424875174736
+	140424875174688 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875174496 -> 140424875174688
+	140424875174496 -> 140424877167696 [dir=none]
+	140424877167696 [label="bias
+ (768)" fillcolor=orange]
+	140424875174496 -> 140425088760864 [dir=none]
+	140425088760864 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875174496 -> 140425089197776 [dir=none]
+	140425089197776 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875174496 -> 140425089198496 [dir=none]
+	140425089198496 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875174496 -> 140424877167616 [dir=none]
+	140424877167616 [label="weight
+ (768)" fillcolor=orange]
+	140424875174496 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875312416 -> 140424875174496
+	140424875312416 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875174160 -> 140424875312416
+	140424875174160 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875174016 -> 140424875174160
+	140424875174016 -> 140425089198096 [dir=none]
+	140425089198096 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875174016 -> 140425089197936 [dir=none]
+	140425089197936 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875174016 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875173872 -> 140424875174016
+	140425088040608 [label="videomae.encoder.layer.2.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088040608 -> 140424875173872
+	140424875173872 [label=AccumulateGrad]
+	140424875173920 -> 140424875174016
+	140424875173920 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875173728 -> 140424875173920
+	140424875173728 -> 140425088761264 [dir=none]
+	140425088761264 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875173728 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875173488 -> 140424875173728
+	140424875173488 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875173344 -> 140424875173488
+	140424875173344 -> 140425091644928 [dir=none]
+	140425091644928 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875173344 -> 140425091643568 [dir=none]
+	140425091643568 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875173344 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875173248 -> 140424875173344
+	140425088040448 [label="videomae.encoder.layer.2.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140425088040448 -> 140424875173248
+	140424875173248 [label=AccumulateGrad]
+	140424875173296 -> 140424875173344
+	140424875173296 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875173008 -> 140424875173296
+	140424875173008 -> 140424877166656 [dir=none]
+	140424877166656 [label="bias
+ (768)" fillcolor=orange]
+	140424875173008 -> 140425088759744 [dir=none]
+	140425088759744 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875173008 -> 140425091643488 [dir=none]
+	140425091643488 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875173008 -> 140425089198256 [dir=none]
+	140425089198256 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875173008 -> 140425088040848 [dir=none]
+	140425088040848 [label="weight
+ (768)" fillcolor=orange]
+	140424875173008 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875174208 -> 140424875173008
+	140424875174208 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875172672 -> 140424875174208
+	140424875172672 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875172528 -> 140424875172672
+	140424875172528 -> 140425089197856 [dir=none]
+	140425089197856 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875172528 -> 140425089199696 [dir=none]
+	140425089199696 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875172528 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875172384 -> 140424875172528
+	140425088040288 [label="videomae.encoder.layer.2.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088040288 -> 140424875172384
+	140424875172384 [label=AccumulateGrad]
+	140424875172480 -> 140424875172528
+	140424875172480 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875172288 -> 140424875172480
+	140424875172288 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140424875172096 -> 140424875172288
+	140424875172096 [label=CloneBackward0]
+	140424875171952 -> 140424875172096
+	140424875171952 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875171904 -> 140424875171952
+	140424875171904 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140425088823152 -> 140424875171904
+	140425088823152 -> 140425089198576 [dir=none]
+	140425089198576 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140425088823152 -> 140425089190784 [dir=none]
+	140425089190784 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140425088823152 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088823056 -> 140425088823152
+	140425088823056 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088822912 -> 140425088823056
+	140425088822912 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088822816 -> 140425088822912
+	140425088822816 -> 140425089188304 [dir=none]
+	140425089188304 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140425088822816 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140425088822720 -> 140425088822816
+	140425088822720 -> 140425089189664 [dir=none]
+	140425089189664 [label="other
+ ()" fillcolor=orange]
+	140425088822720 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140425088822672 -> 140425088822720
+	140425088822672 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140425088822528 -> 140425088822672
+	140425088822528 -> 140425089190064 [dir=none]
+	140425089190064 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140425088822528 -> 140425089191104 [dir=none]
+	140425089191104 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140425088822528 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088822384 -> 140425088822528
+	140425088822384 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088822240 -> 140425088822384
+	140425088822240 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088822096 -> 140425088822240
+	140425088822096 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088822000 -> 140425088822096
+	140425088822000 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088821904 -> 140425088822000
+	140425088821904 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088821808 -> 140425088821904
+	140425088821808 -> 140425089189984 [dir=none]
+	140425089189984 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088821808 -> 140425089190704 [dir=none]
+	140425089190704 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088821808 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088821712 -> 140425088821808
+	140425088040048 [label="videomae.encoder.layer.2.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140425088040048 -> 140425088821712
+	140425088821712 [label=AccumulateGrad]
+	140425088821760 -> 140425088821808
+	140425088821760 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088821616 -> 140425088821760
+	140425088821616 -> 140425088040768 [dir=none]
+	140425088040768 [label="bias
+ (768)" fillcolor=orange]
+	140425088821616 -> 140425088761024 [dir=none]
+	140425088761024 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088821616 -> 140425089189344 [dir=none]
+	140425089189344 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088821616 -> 140425089191024 [dir=none]
+	140425089191024 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088821616 -> 140425088040688 [dir=none]
+	140425088040688 [label="weight
+ (768)" fillcolor=orange]
+	140425088821616 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875172720 -> 140425088821616
+	140424875172720 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088821136 -> 140424875172720
+	140425088821136 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088820944 -> 140425088821136
+	140425088820944 -> 140425089189024 [dir=none]
+	140425089189024 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140425088820944 -> 140425089190144 [dir=none]
+	140425089190144 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140425088820944 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140425088820848 -> 140425088820944
+	140425088039408 [label="videomae.encoder.layer.1.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088039408 -> 140425088820848
+	140425088820848 [label=AccumulateGrad]
+	140425088820896 -> 140425088820944
+	140425088820896 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140425088820608 -> 140425088820896
+	140425088820608 -> 140425088759904 [dir=none]
+	140425088759904 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140425088820608 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140425088820416 -> 140425088820608
+	140425088820416 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140425088820320 -> 140425088820416
+	140425088820320 -> 140425089187984 [dir=none]
+	140425089187984 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088820320 -> 140425089190304 [dir=none]
+	140425089190304 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140425088820320 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140425088820224 -> 140425088820320
+	140425088039248 [label="videomae.encoder.layer.1.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140425088039248 -> 140425088820224
+	140425088820224 [label=AccumulateGrad]
+	140425088820272 -> 140425088820320
+	140425088820272 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088820032 -> 140425088820272
+	140425088820032 -> 140425088039728 [dir=none]
+	140425088039728 [label="bias
+ (768)" fillcolor=orange]
+	140425088820032 -> 140425088761664 [dir=none]
+	140425088761664 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088820032 -> 140425088793792 [dir=none]
+	140425088793792 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088820032 -> 140425088794272 [dir=none]
+	140425088794272 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088820032 -> 140425088039648 [dir=none]
+	140425088039648 [label="weight
+ (768)" fillcolor=orange]
+	140425088820032 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088821184 -> 140425088820032
+	140425088821184 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088819744 -> 140425088821184
+	140425088819744 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088819552 -> 140425088819744
+	140425088819552 -> 140425088794512 [dir=none]
+	140425088794512 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088819552 -> 140425088793712 [dir=none]
+	140425088793712 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088819552 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088819456 -> 140425088819552
+	140425088039088 [label="videomae.encoder.layer.1.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088039088 -> 140425088819456
+	140425088819456 [label=AccumulateGrad]
+	140425088819504 -> 140425088819552
+	140425088819504 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088819360 -> 140425088819504
+	140425088819360 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140425088819984 -> 140425088819360
+	140425088819984 [label=CloneBackward0]
+	140424875261808 -> 140425088819984
+	140424875261808 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875261712 -> 140424875261808
+	140424875261712 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140424875261472 -> 140424875261712
+	140424875261472 -> 140425088792992 [dir=none]
+	140425088792992 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140424875261472 -> 140425088793232 [dir=none]
+	140425088793232 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140424875261472 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875261376 -> 140424875261472
+	140424875261376 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875261184 -> 140424875261376
+	140424875261184 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140424875261136 -> 140424875261184
+	140424875261136 -> 140425088793952 [dir=none]
+	140425088793952 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140424875261136 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140424875261040 -> 140424875261136
+	140424875261040 -> 140425088793872 [dir=none]
+	140425088793872 [label="other
+ ()" fillcolor=orange]
+	140424875261040 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140424875260944 -> 140424875261040
+	140424875260944 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140424875260848 -> 140424875260944
+	140424875260848 -> 140425088794112 [dir=none]
+	140425088794112 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140424875260848 -> 140425088793472 [dir=none]
+	140425088793472 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140424875260848 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140424875260752 -> 140424875260848
+	140424875260752 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875260608 -> 140424875260752
+	140424875260608 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875260512 -> 140424875260608
+	140424875260512 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875260416 -> 140424875260512
+	140424875260416 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875260320 -> 140424875260416
+	140424875260320 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875260224 -> 140424875260320
+	140424875260224 -> 140425088793152 [dir=none]
+	140425088793152 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875260224 -> 140425088794432 [dir=none]
+	140425088794432 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875260224 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875260128 -> 140424875260224
+	140425088038848 [label="videomae.encoder.layer.1.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140425088038848 -> 140424875260128
+	140424875260128 [label=AccumulateGrad]
+	140424875260176 -> 140424875260224
+	140424875260176 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875260032 -> 140424875260176
+	140424875260032 -> 140425088039568 [dir=none]
+	140425088039568 [label="bias
+ (768)" fillcolor=orange]
+	140424875260032 -> 140425088760784 [dir=none]
+	140425088760784 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875260032 -> 140425088792592 [dir=none]
+	140425088792592 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875260032 -> 140425088793392 [dir=none]
+	140425088793392 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875260032 -> 140425088039488 [dir=none]
+	140425088039488 [label="weight
+ (768)" fillcolor=orange]
+	140424875260032 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140425088819792 -> 140424875260032
+	140425088819792 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875259696 -> 140425088819792
+	140424875259696 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875259504 -> 140424875259696
+	140424875259504 -> 140425088793632 [dir=none]
+	140425088793632 [label="mat1
+ (1568, 3072)" fillcolor=orange]
+	140424875259504 -> 140425088792352 [dir=none]
+	140425088792352 [label="mat2
+ (3072, 768)" fillcolor=orange]
+	140424875259504 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :   (1568, 3072)
+mat1_strides:      (3072, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (3072, 768)
+mat2_strides:      (1, 3072)"]
+	140424875259408 -> 140424875259504
+	140425088038208 [label="videomae.encoder.layer.0.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088038208 -> 140424875259408
+	140424875259408 [label=AccumulateGrad]
+	140424875259456 -> 140424875259504
+	140424875259456 [label="ViewBackward0
+---------------------------
+self_sizes: (1, 1568, 3072)"]
+	140424875259264 -> 140424875259456
+	140424875259264 -> 140425088760544 [dir=none]
+	140425088760544 [label="self
+ (1, 1568, 3072)" fillcolor=orange]
+	140424875259264 [label="GeluBackward0
+---------------------------
+approximate:           none
+self       : [saved tensor]"]
+	140424875259072 -> 140424875259264
+	140424875259072 [label="ViewBackward0
+------------------------
+self_sizes: (1568, 3072)"]
+	140424875258928 -> 140424875259072
+	140424875258928 -> 140425088792752 [dir=none]
+	140425088792752 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875258928 -> 140425088792832 [dir=none]
+	140425088792832 [label="mat2
+ (768, 3072)" fillcolor=orange]
+	140424875258928 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :    (768, 3072)
+mat2_strides:       (1, 768)"]
+	140424875258832 -> 140424875258928
+	140425088038048 [label="videomae.encoder.layer.0.intermediate.dense.bias
+ (3072)" fillcolor=lightblue]
+	140425088038048 -> 140424875258832
+	140424875258832 [label=AccumulateGrad]
+	140424875258880 -> 140424875258928
+	140424875258880 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875258736 -> 140424875258880
+	140424875258736 -> 140425088038528 [dir=none]
+	140425088038528 [label="bias
+ (768)" fillcolor=orange]
+	140424875258736 -> 140425088760304 [dir=none]
+	140425088760304 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140424875258736 -> 140425088792432 [dir=none]
+	140425088792432 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140424875258736 -> 140425088792512 [dir=none]
+	140425088792512 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140424875258736 -> 140425088038448 [dir=none]
+	140425088038448 [label="weight
+ (768)" fillcolor=orange]
+	140424875258736 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875259744 -> 140424875258736
+	140424875259744 [label="AddBackward0
+------------
+alpha: 1"]
+	140424875258256 -> 140424875259744
+	140424875258256 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875258016 -> 140424875258256
+	140424875258016 -> 140425088793072 [dir=none]
+	140425088793072 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875258016 -> 140425088791952 [dir=none]
+	140425088791952 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875258016 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875258208 -> 140424875258016
+	140425088037488 [label="videomae.encoder.layer.0.attention.output.dense.bias
+ (768)" fillcolor=lightblue]
+	140425088037488 -> 140424875258208
+	140424875258208 [label=AccumulateGrad]
+	140425088249760 -> 140424875258016
+	140425088249760 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088249664 -> 140425088249760
+	140425088249664 [label="ViewBackward0
+-----------------------------
+self_sizes: (1, 1568, 12, 64)"]
+	140425088249472 -> 140425088249664
+	140425088249472 [label=CloneBackward0]
+	140425088249376 -> 140425088249472
+	140425088249376 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088249280 -> 140425088249376
+	140425088249280 [label="UnsafeViewBackward0
+--------------------------
+self_sizes: (12, 1568, 64)"]
+	140425088249136 -> 140425088249280
+	140425088249136 -> 140425088791872 [dir=none]
+	140425088791872 [label="mat2
+ (12, 1568, 64)" fillcolor=orange]
+	140425088249136 -> 140425088791712 [dir=none]
+	140425088791712 [label="self
+ (12, 1568, 1568)" fillcolor=orange]
+	140425088249136 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088248992 -> 140425088249136
+	140425088248992 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088248800 -> 140425088248992
+	140425088248800 [label="ExpandBackward0
+-------------------------------
+self_sizes: (1, 12, 1568, 1568)"]
+	140425088248656 -> 140425088248800
+	140425088248656 -> 140425088794352 [dir=none]
+	140425088794352 [label="result
+ (1, 12, 1568, 1568)" fillcolor=orange]
+	140425088248656 [label="SoftmaxBackward0
+----------------------------
+dim   : 18446744073709551615
+result:       [saved tensor]"]
+	140425088248560 -> 140425088248656
+	140425088248560 -> 140425088793312 [dir=none]
+	140425088793312 [label="other
+ ()" fillcolor=orange]
+	140425088248560 [label="DivBackward0
+---------------------
+other: [saved tensor]
+self :           None"]
+	140425088248464 -> 140425088248560
+	140425088248464 [label="UnsafeViewBackward0
+----------------------------
+self_sizes: (12, 1568, 1568)"]
+	140425088248224 -> 140425088248464
+	140425088248224 -> 140425088792672 [dir=none]
+	140425088792672 [label="mat2
+ (12, 64, 1568)" fillcolor=orange]
+	140425088248224 -> 140425088793552 [dir=none]
+	140425088793552 [label="self
+ (12, 1568, 64)" fillcolor=orange]
+	140425088248224 [label="BmmBackward0
+--------------------
+mat2: [saved tensor]
+self: [saved tensor]"]
+	140425088248128 -> 140425088248224
+	140425088248128 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088247984 -> 140425088248128
+	140425088247984 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088247888 -> 140425088247984
+	140425088247888 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088247792 -> 140425088247888
+	140425088247792 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088247696 -> 140425088247792
+	140425088247696 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088247600 -> 140425088247696
+	140425088247600 -> 140425088792032 [dir=none]
+	140425088792032 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088247600 -> 140425088791792 [dir=none]
+	140425088791792 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088247600 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088247504 -> 140425088247600
+	140425088037808 [label="videomae.encoder.layer.0.attention.attention.q_bias
+ (768)" fillcolor=lightblue]
+	140425088037808 -> 140425088247504
+	140425088247504 [label=AccumulateGrad]
+	140425088247552 -> 140425088247600
+	140425088247552 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088247408 -> 140425088247552
+	140425088247408 -> 140425088038368 [dir=none]
+	140425088038368 [label="bias
+ (768)" fillcolor=orange]
+	140425088247408 -> 140425088790672 [dir=none]
+	140425088790672 [label="input
+ (1, 1568, 768)" fillcolor=orange]
+	140425088247408 -> 140425088791312 [dir=none]
+	140425088791312 [label="result1
+ (1, 1568, 1)" fillcolor=orange]
+	140425088247408 -> 140425088792192 [dir=none]
+	140425088792192 [label="result2
+ (1, 1568, 1)" fillcolor=orange]
+	140425088247408 -> 140425088038288 [dir=none]
+	140425088038288 [label="weight
+ (768)" fillcolor=orange]
+	140425088247408 [label="NativeLayerNormBackward0
+--------------------------------
+bias            : [saved tensor]
+input           : [saved tensor]
+normalized_shape:         (768,)
+result1         : [saved tensor]
+result2         : [saved tensor]
+weight          : [saved tensor]"]
+	140424875258304 -> 140425088247408
+	140424875258304 [label="AddBackward0
+------------
+alpha: 1"]
+	140425088247072 -> 140424875258304
+	140425088247072 [label="TransposeBackward0
+------------------
+dim0: 1
+dim1: 2"]
+	140425088246976 -> 140425088247072
+	140425088246976 [label="ReshapeAliasBackward0
+-------------------------------
+self_sizes: (1, 768, 8, 14, 14)"]
+	140425088246880 -> 140425088246976
+	140425088246880 -> 140425088790912 [dir=none]
+	140425088790912 [label="input
+ (1, 3, 16, 224, 224)" fillcolor=orange]
+	140425088246880 -> 140425088037248 [dir=none]
+	140425088037248 [label="weight
+ (768, 3, 2, 16, 16)" fillcolor=orange]
+	140425088246880 [label="ConvolutionBackward0
+------------------------------
+bias_sizes_opt:         (768,)
+dilation      :      (1, 1, 1)
+groups        :              1
+input         : [saved tensor]
+output_padding:      (0, 0, 0)
+padding       :      (0, 0, 0)
+stride        :    (2, 16, 16)
+transposed    :          False
+weight        : [saved tensor]"]
+	140425088246784 -> 140425088246880
+	140425088037248 [label="videomae.embeddings.patch_embeddings.projection.weight
+ (768, 3, 2, 16, 16)" fillcolor=lightblue]
+	140425088037248 -> 140425088246784
+	140425088246784 [label=AccumulateGrad]
+	140425088246832 -> 140425088246880
+	140425088037328 [label="videomae.embeddings.patch_embeddings.projection.bias
+ (768)" fillcolor=lightblue]
+	140425088037328 -> 140425088246832
+	140425088246832 [label=AccumulateGrad]
+	140425088247216 -> 140425088247408
+	140425088038288 [label="videomae.encoder.layer.0.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140425088038288 -> 140425088247216
+	140425088247216 [label=AccumulateGrad]
+	140425088247264 -> 140425088247408
+	140425088038368 [label="videomae.encoder.layer.0.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140425088038368 -> 140425088247264
+	140425088247264 [label=AccumulateGrad]
+	140425088248080 -> 140425088247600
+	140425088248080 [label=TBackward0]
+	140425088247120 -> 140425088248080
+	140425088037568 [label="videomae.encoder.layer.0.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088037568 -> 140425088247120
+	140425088247120 [label=AccumulateGrad]
+	140425088248176 -> 140425088248224
+	140425088248176 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088247840 -> 140425088248176
+	140425088247840 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088247648 -> 140425088247840
+	140425088247648 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140425088246928 -> 140425088247648
+	140425088246928 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088247024 -> 140425088246928
+	140425088247024 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088246736 -> 140425088247024
+	140425088246736 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088246640 -> 140425088246736
+	140425088246640 -> 140425088791552 [dir=none]
+	140425088791552 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088246640 -> 140425088791232 [dir=none]
+	140425088791232 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088246640 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088246544 -> 140425088246640
+	140425088246544 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088247408 -> 140425088246544
+	140425088246592 -> 140425088246640
+	140425088246592 [label=TBackward0]
+	140425088246496 -> 140425088246592
+	140425088037648 [label="videomae.encoder.layer.0.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088037648 -> 140425088246496
+	140425088246496 [label=AccumulateGrad]
+	140425088249088 -> 140425088249136
+	140425088249088 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088248608 -> 140425088249088
+	140425088248608 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088248272 -> 140425088248608
+	140425088248272 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088247936 -> 140425088248272
+	140425088247936 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088247456 -> 140425088247936
+	140425088247456 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088247360 -> 140425088247456
+	140425088247360 -> 140425088792912 [dir=none]
+	140425088792912 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088247360 -> 140425088792272 [dir=none]
+	140425088792272 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088247360 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088248032 -> 140425088247360
+	140425088037888 [label="videomae.encoder.layer.0.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140425088037888 -> 140425088248032
+	140425088248032 [label=AccumulateGrad]
+	140425088246688 -> 140425088247360
+	140425088246688 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088247408 -> 140425088246688
+	140425088248848 -> 140425088247360
+	140425088248848 [label=TBackward0]
+	140425088246352 -> 140425088248848
+	140425088037728 [label="videomae.encoder.layer.0.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088037728 -> 140425088246352
+	140425088246352 [label=AccumulateGrad]
+	140425088249808 -> 140424875258016
+	140425088249808 [label=TBackward0]
+	140425088249424 -> 140425088249808
+	140425092382944 [label="videomae.encoder.layer.0.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140425092382944 -> 140425088249424
+	140425088249424 [label=AccumulateGrad]
+	140424875258304 -> 140424875259744
+	140424875258448 -> 140424875258736
+	140425088038448 [label="videomae.encoder.layer.0.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140425088038448 -> 140424875258448
+	140424875258448 [label=AccumulateGrad]
+	140424875258544 -> 140424875258736
+	140425088038528 [label="videomae.encoder.layer.0.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140425088038528 -> 140424875258544
+	140424875258544 [label=AccumulateGrad]
+	140424875259168 -> 140424875258928
+	140424875259168 [label=TBackward0]
+	140424875258400 -> 140424875259168
+	140425088037968 [label="videomae.encoder.layer.0.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140425088037968 -> 140424875258400
+	140424875258400 [label=AccumulateGrad]
+	140424875259648 -> 140424875259504
+	140424875259648 [label=TBackward0]
+	140424875258976 -> 140424875259648
+	140425088038128 [label="videomae.encoder.layer.0.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140425088038128 -> 140424875258976
+	140424875258976 [label=AccumulateGrad]
+	140424875259744 -> 140425088819792
+	140424875259840 -> 140424875260032
+	140425088039488 [label="videomae.encoder.layer.1.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140425088039488 -> 140424875259840
+	140424875259840 [label=AccumulateGrad]
+	140424875259888 -> 140424875260032
+	140425088039568 [label="videomae.encoder.layer.1.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140425088039568 -> 140424875259888
+	140424875259888 [label=AccumulateGrad]
+	140424875260704 -> 140424875260224
+	140424875260704 [label=TBackward0]
+	140424875259792 -> 140424875260704
+	140425088038608 [label="videomae.encoder.layer.1.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088038608 -> 140424875259792
+	140424875259792 [label=AccumulateGrad]
+	140424875260800 -> 140424875260848
+	140424875260800 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875260464 -> 140424875260800
+	140424875260464 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875260272 -> 140424875260464
+	140424875260272 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875259360 -> 140424875260272
+	140424875259360 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875259552 -> 140424875259360
+	140424875259552 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875258592 -> 140424875259552
+	140424875258592 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875259216 -> 140424875258592
+	140424875259216 -> 140425088791632 [dir=none]
+	140425088791632 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875259216 -> 140425088794032 [dir=none]
+	140425088794032 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875259216 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875258640 -> 140424875259216
+	140424875258640 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875260032 -> 140424875258640
+	140424875258112 -> 140424875259216
+	140424875258112 [label=TBackward0]
+	140425088249712 -> 140424875258112
+	140425088038688 [label="videomae.encoder.layer.1.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088038688 -> 140425088249712
+	140425088249712 [label=AccumulateGrad]
+	140424875261424 -> 140424875261472
+	140424875261424 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875261088 -> 140424875261424
+	140424875261088 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875260896 -> 140424875261088
+	140424875260896 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875260560 -> 140424875260896
+	140424875260560 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875259936 -> 140424875260560
+	140424875259936 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875259120 -> 140424875259936
+	140424875259120 -> 140425088791152 [dir=none]
+	140425088791152 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875259120 -> 140425088791392 [dir=none]
+	140425088791392 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875259120 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875258784 -> 140424875259120
+	140425088038928 [label="videomae.encoder.layer.1.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140425088038928 -> 140424875258784
+	140424875258784 [label=AccumulateGrad]
+	140424875259984 -> 140424875259120
+	140424875259984 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875260032 -> 140424875259984
+	140424875261280 -> 140424875259120
+	140424875261280 [label=TBackward0]
+	140425088249328 -> 140424875261280
+	140425088038768 [label="videomae.encoder.layer.1.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088038768 -> 140425088249328
+	140425088249328 [label=AccumulateGrad]
+	140425088819696 -> 140425088819552
+	140425088819696 [label=TBackward0]
+	140425088819264 -> 140425088819696
+	140425088039008 [label="videomae.encoder.layer.1.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088039008 -> 140425088819264
+	140425088819264 [label=AccumulateGrad]
+	140425088819792 -> 140425088821184
+	140425088819888 -> 140425088820032
+	140425088039648 [label="videomae.encoder.layer.1.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140425088039648 -> 140425088819888
+	140425088819888 [label=AccumulateGrad]
+	140425088819936 -> 140425088820032
+	140425088039728 [label="videomae.encoder.layer.1.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140425088039728 -> 140425088819936
+	140425088819936 [label=AccumulateGrad]
+	140425088820512 -> 140425088820320
+	140425088820512 [label=TBackward0]
+	140425088819840 -> 140425088820512
+	140425088039168 [label="videomae.encoder.layer.1.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140425088039168 -> 140425088819840
+	140425088819840 [label=AccumulateGrad]
+	140425088821088 -> 140425088820944
+	140425088821088 [label=TBackward0]
+	140425088820368 -> 140425088821088
+	140425088039328 [label="videomae.encoder.layer.1.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140425088039328 -> 140425088820368
+	140425088820368 [label=AccumulateGrad]
+	140425088821184 -> 140424875172720
+	140425088821280 -> 140425088821616
+	140425088040688 [label="videomae.encoder.layer.2.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140425088040688 -> 140425088821280
+	140425088821280 [label=AccumulateGrad]
+	140425088821424 -> 140425088821616
+	140425088040768 [label="videomae.encoder.layer.2.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140425088040768 -> 140425088821424
+	140425088821424 [label=AccumulateGrad]
+	140425088822336 -> 140425088821808
+	140425088822336 [label=TBackward0]
+	140425088821328 -> 140425088822336
+	140425088039808 [label="videomae.encoder.layer.2.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088039808 -> 140425088821328
+	140425088821328 [label=AccumulateGrad]
+	140425088822432 -> 140425088822528
+	140425088822432 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088822048 -> 140425088822432
+	140425088822048 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088821856 -> 140425088822048
+	140425088821856 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140425088820800 -> 140425088821856
+	140425088820800 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088820992 -> 140425088820800
+	140425088820992 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088820080 -> 140425088820992
+	140425088820080 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088820560 -> 140425088820080
+	140425088820560 -> 140425088791472 [dir=none]
+	140425088791472 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088820560 -> 140425088794192 [dir=none]
+	140425088794192 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088820560 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088819648 -> 140425088820560
+	140425088819648 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088821616 -> 140425088819648
+	140425088819408 -> 140425088820560
+	140425088819408 [label=TBackward0]
+	140425088820128 -> 140425088819408
+	140425088039888 [label="videomae.encoder.layer.2.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088039888 -> 140425088820128
+	140425088820128 [label=AccumulateGrad]
+	140425088823104 -> 140425088823152
+	140425088823104 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088822768 -> 140425088823104
+	140425088822768 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088822576 -> 140425088822768
+	140425088822576 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088822144 -> 140425088822576
+	140425088822144 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088821472 -> 140425088822144
+	140425088821472 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088820464 -> 140425088821472
+	140425088820464 -> 140425088792112 [dir=none]
+	140425088792112 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088820464 -> 140425089152400 [dir=none]
+	140425089152400 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088820464 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088820176 -> 140425088820464
+	140425088040128 [label="videomae.encoder.layer.2.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140425088040128 -> 140425088820176
+	140425088820176 [label=AccumulateGrad]
+	140425088821520 -> 140425088820464
+	140425088821520 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088821616 -> 140425088821520
+	140425088822960 -> 140425088820464
+	140425088822960 [label=TBackward0]
+	140425088819312 -> 140425088822960
+	140425088039968 [label="videomae.encoder.layer.2.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088039968 -> 140425088819312
+	140425088819312 [label=AccumulateGrad]
+	140424875172624 -> 140424875172528
+	140424875172624 [label=TBackward0]
+	140424875172000 -> 140424875172624
+	140425088040208 [label="videomae.encoder.layer.2.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140425088040208 -> 140424875172000
+	140424875172000 [label=AccumulateGrad]
+	140424875172720 -> 140424875174208
+	140424875172816 -> 140424875173008
+	140425088040848 [label="videomae.encoder.layer.2.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140425088040848 -> 140424875172816
+	140424875172816 [label=AccumulateGrad]
+	140424875172864 -> 140424875173008
+	140424877166656 [label="videomae.encoder.layer.2.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877166656 -> 140424875172864
+	140424875172864 [label=AccumulateGrad]
+	140424875173584 -> 140424875173344
+	140424875173584 [label=TBackward0]
+	140424875172768 -> 140424875173584
+	140425088040368 [label="videomae.encoder.layer.2.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140425088040368 -> 140424875172768
+	140424875172768 [label=AccumulateGrad]
+	140424875174112 -> 140424875174016
+	140424875174112 [label=TBackward0]
+	140424875173392 -> 140424875174112
+	140425088040528 [label="videomae.encoder.layer.2.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140425088040528 -> 140424875173392
+	140424875173392 [label=AccumulateGrad]
+	140424875174208 -> 140424875312416
+	140424875174304 -> 140424875174496
+	140424877167616 [label="videomae.encoder.layer.3.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877167616 -> 140424875174304
+	140424875174304 [label=AccumulateGrad]
+	140424875174352 -> 140424875174496
+	140424877167696 [label="videomae.encoder.layer.3.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877167696 -> 140424875174352
+	140424875174352 [label=AccumulateGrad]
+	140424875175264 -> 140424875174736
+	140424875175264 [label=TBackward0]
+	140424875174256 -> 140424875175264
+	140424877166736 [label="videomae.encoder.layer.3.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877166736 -> 140424875174256
+	140424875174256 [label=AccumulateGrad]
+	140424875175360 -> 140424875175408
+	140424875175360 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875175024 -> 140424875175360
+	140424875175024 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875174784 -> 140424875175024
+	140424875174784 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875173824 -> 140424875174784
+	140424875173824 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875174064 -> 140424875173824
+	140424875174064 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875172912 -> 140424875174064
+	140424875172912 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875173680 -> 140424875172912
+	140424875173680 -> 140420401279600 [dir=none]
+	140420401279600 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875173680 -> 140420401282000 [dir=none]
+	140420401282000 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875173680 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875172576 -> 140424875173680
+	140424875172576 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875174496 -> 140424875172576
+	140424875172336 -> 140424875173680
+	140424875172336 [label=TBackward0]
+	140424875172960 -> 140424875172336
+	140424877166816 [label="videomae.encoder.layer.3.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877166816 -> 140424875172960
+	140424875172960 [label=AccumulateGrad]
+	140424875311264 -> 140424875311360
+	140424875311264 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875175648 -> 140424875311264
+	140424875175648 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875175456 -> 140424875175648
+	140424875175456 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875175120 -> 140424875175456
+	140424875175120 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875174400 -> 140424875175120
+	140424875174400 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875173536 -> 140424875174400
+	140424875173536 -> 140425089151600 [dir=none]
+	140425089151600 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875173536 -> 140425089152800 [dir=none]
+	140425089152800 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875173536 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875173200 -> 140424875173536
+	140424877167056 [label="videomae.encoder.layer.3.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877167056 -> 140424875173200
+	140424875173200 [label=AccumulateGrad]
+	140424875174448 -> 140424875173536
+	140424875174448 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875174496 -> 140424875174448
+	140424875175840 -> 140424875173536
+	140424875175840 [label=TBackward0]
+	140424875172192 -> 140424875175840
+	140424877166896 [label="videomae.encoder.layer.3.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877166896 -> 140424875172192
+	140424875172192 [label=AccumulateGrad]
+	140424875312272 -> 140424875312176
+	140424875312272 [label=TBackward0]
+	140424875311648 -> 140424875312272
+	140424877167136 [label="videomae.encoder.layer.3.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877167136 -> 140424875311648
+	140424875311648 [label=AccumulateGrad]
+	140424875312416 -> 140424875313568
+	140424875312512 -> 140424875312704
+	140424877167776 [label="videomae.encoder.layer.3.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877167776 -> 140424875312512
+	140424875312512 [label=AccumulateGrad]
+	140424875312560 -> 140424875312704
+	140424877167856 [label="videomae.encoder.layer.3.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877167856 -> 140424875312560
+	140424875312560 [label=AccumulateGrad]
+	140424875313088 -> 140424875312896
+	140424875313088 [label=TBackward0]
+	140424875312464 -> 140424875313088
+	140424877167296 [label="videomae.encoder.layer.3.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877167296 -> 140424875312464
+	140424875312464 [label=AccumulateGrad]
+	140424875313472 -> 140424875313376
+	140424875313472 [label=TBackward0]
+	140424875312944 -> 140424875313472
+	140424877167456 [label="videomae.encoder.layer.3.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877167456 -> 140424875312944
+	140424875312944 [label=AccumulateGrad]
+	140424875313568 -> 140424875193920
+	140424875313664 -> 140424875313856
+	140424877168816 [label="videomae.encoder.layer.4.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877168816 -> 140424875313664
+	140424875313664 [label=AccumulateGrad]
+	140424875313712 -> 140424875313856
+	140424877168896 [label="videomae.encoder.layer.4.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877168896 -> 140424875313712
+	140424875313712 [label=AccumulateGrad]
+	140424875314720 -> 140424875314048
+	140424875314720 [label=TBackward0]
+	140424875313616 -> 140424875314720
+	140424877167936 [label="videomae.encoder.layer.4.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877167936 -> 140424875313616
+	140424875313616 [label=AccumulateGrad]
+	140424875314816 -> 140424875314912
+	140424875314816 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875314432 -> 140424875314816
+	140424875314432 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875314096 -> 140424875314432
+	140424875314096 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875313232 -> 140424875314096
+	140424875313232 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875313424 -> 140424875313232
+	140424875313424 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875312608 -> 140424875313424
+	140424875312608 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875313136 -> 140424875312608
+	140424875313136 -> 140425089152720 [dir=none]
+	140425089152720 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875313136 -> 140425089152480 [dir=none]
+	140425089152480 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875313136 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875312224 -> 140424875313136
+	140424875312224 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875313856 -> 140424875312224
+	140424875311984 -> 140424875313136
+	140424875311984 [label=TBackward0]
+	140424875312656 -> 140424875311984
+	140424877168016 [label="videomae.encoder.layer.4.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877168016 -> 140424875312656
+	140424875312656 [label=AccumulateGrad]
+	140424875192768 -> 140424875192816
+	140424875192768 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875192672 -> 140424875192768
+	140424875192672 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875192576 -> 140424875192672
+	140424875192576 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875314528 -> 140424875192576
+	140424875314528 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875313760 -> 140424875314528
+	140424875313760 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875313040 -> 140424875313760
+	140424875313040 -> 140425089151440 [dir=none]
+	140425089151440 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875313040 -> 140425089151760 [dir=none]
+	140425089151760 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875313040 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875312752 -> 140424875313040
+	140424877168256 [label="videomae.encoder.layer.4.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877168256 -> 140424875312752
+	140424875312752 [label=AccumulateGrad]
+	140424875313808 -> 140424875313040
+	140424875313808 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875313856 -> 140424875313808
+	140424875315104 -> 140424875313040
+	140424875315104 [label=TBackward0]
+	140424875311552 -> 140424875315104
+	140424877168096 [label="videomae.encoder.layer.4.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877168096 -> 140424875311552
+	140424875311552 [label=AccumulateGrad]
+	140424875193776 -> 140424875193680
+	140424875193776 [label=TBackward0]
+	140424875193056 -> 140424875193776
+	140424877168336 [label="videomae.encoder.layer.4.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877168336 -> 140424875193056
+	140424875193056 [label=AccumulateGrad]
+	140424875193920 -> 140424875195264
+	140424875194064 -> 140424875194304
+	140424877168976 [label="videomae.encoder.layer.4.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877168976 -> 140424875194064
+	140424875194064 [label=AccumulateGrad]
+	140424875194112 -> 140424875194304
+	140424877169056 [label="videomae.encoder.layer.4.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877169056 -> 140424875194112
+	140424875194112 [label=AccumulateGrad]
+	140424875194688 -> 140424875194496
+	140424875194688 [label=TBackward0]
+	140424875194016 -> 140424875194688
+	140424877168496 [label="videomae.encoder.layer.4.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877168496 -> 140424875194016
+	140424875194016 [label=AccumulateGrad]
+	140424875195168 -> 140424875195024
+	140424875195168 [label=TBackward0]
+	140424875194544 -> 140424875195168
+	140424877168656 [label="videomae.encoder.layer.4.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877168656 -> 140424875194544
+	140424875194544 [label=AccumulateGrad]
+	140424875195264 -> 140424875198352
+	140424875195360 -> 140424875195552
+	140424877170016 [label="videomae.encoder.layer.5.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877170016 -> 140424875195360
+	140424875195360 [label=AccumulateGrad]
+	140424875195408 -> 140424875195552
+	140424877170096 [label="videomae.encoder.layer.5.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877170096 -> 140424875195408
+	140424875195408 [label=AccumulateGrad]
+	140424875196224 -> 140424875195744
+	140424875196224 [label=TBackward0]
+	140424875195312 -> 140424875196224
+	140424877169136 [label="videomae.encoder.layer.5.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877169136 -> 140424875195312
+	140424875195312 [label=AccumulateGrad]
+	140424875196320 -> 140424875196480
+	140424875196320 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875195984 -> 140424875196320
+	140424875195984 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875195792 -> 140424875195984
+	140424875195792 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875194880 -> 140424875195792
+	140424875194880 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875195120 -> 140424875194880
+	140424875195120 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875194208 -> 140424875195120
+	140424875194208 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875194736 -> 140424875194208
+	140424875194736 -> 140425089151520 [dir=none]
+	140425089151520 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875194736 -> 140425088863904 [dir=none]
+	140425088863904 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875194736 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875193728 -> 140424875194736
+	140424875193728 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875195552 -> 140424875193728
+	140424875193488 -> 140424875194736
+	140424875193488 [label=TBackward0]
+	140424875194256 -> 140424875193488
+	140424877169216 [label="videomae.encoder.layer.5.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877169216 -> 140424875194256
+	140424875194256 [label=AccumulateGrad]
+	140424875197200 -> 140424875197248
+	140424875197200 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875196720 -> 140424875197200
+	140424875196720 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875196960 -> 140424875196720
+	140424875196960 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875196912 -> 140424875196960
+	140424875196912 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875195456 -> 140424875196912
+	140424875195456 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875194640 -> 140424875195456
+	140424875194640 -> 140425088863344 [dir=none]
+	140425088863344 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875194640 -> 140425088861424 [dir=none]
+	140425088861424 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875194640 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875194352 -> 140424875194640
+	140424877169456 [label="videomae.encoder.layer.5.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877169456 -> 140424875194352
+	140424875194352 [label=AccumulateGrad]
+	140424875195504 -> 140424875194640
+	140424875195504 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875195552 -> 140424875195504
+	140424875196368 -> 140424875194640
+	140424875196368 [label=TBackward0]
+	140424875192960 -> 140424875196368
+	140424877169296 [label="videomae.encoder.layer.5.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877169296 -> 140424875192960
+	140424875192960 [label=AccumulateGrad]
+	140424875198208 -> 140424875198112
+	140424875198208 [label=TBackward0]
+	140424875197536 -> 140424875198208
+	140424877169536 [label="videomae.encoder.layer.5.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877169536 -> 140424875197536
+	140424875197536 [label=AccumulateGrad]
+	140424875198352 -> 140424875199600
+	140424875198448 -> 140424875198688
+	140424877170176 [label="videomae.encoder.layer.5.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877170176 -> 140424875198448
+	140424875198448 [label=AccumulateGrad]
+	140424875198496 -> 140424875198688
+	140424877170256 [label="videomae.encoder.layer.5.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877170256 -> 140424875198496
+	140424875198496 [label=AccumulateGrad]
+	140424875199120 -> 140424875198928
+	140424875199120 [label=TBackward0]
+	140424875198400 -> 140424875199120
+	140424877169696 [label="videomae.encoder.layer.5.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877169696 -> 140424875198400
+	140424875198400 [label=AccumulateGrad]
+	140424875199504 -> 140424875199408
+	140424875199504 [label=TBackward0]
+	140424875198976 -> 140424875199504
+	140424877169856 [label="videomae.encoder.layer.5.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877169856 -> 140424875198976
+	140424875198976 [label=AccumulateGrad]
+	140424875199600 -> 140424875115088
+	140424875199696 -> 140424875199888
+	140424877363824 [label="videomae.encoder.layer.6.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877363824 -> 140424875199696
+	140424875199696 [label=AccumulateGrad]
+	140424875199744 -> 140424875199888
+	140424877363904 [label="videomae.encoder.layer.6.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877363904 -> 140424875199744
+	140424875199744 [label=AccumulateGrad]
+	140424875200464 -> 140424875200080
+	140424875200464 [label=TBackward0]
+	140424875199648 -> 140424875200464
+	140424877170336 [label="videomae.encoder.layer.6.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877170336 -> 140424875199648
+	140424875199648 [label=AccumulateGrad]
+	140424875432592 -> 140424875116576
+	140424875432592 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088851440 -> 140424875432592
+	140425088851440 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875200128 -> 140425088851440
+	140424875200128 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875199264 -> 140424875200128
+	140424875199264 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875199456 -> 140424875199264
+	140424875199456 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875198544 -> 140424875199456
+	140424875198544 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875199168 -> 140424875198544
+	140424875199168 -> 140425088864064 [dir=none]
+	140425088864064 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875199168 -> 140425088864144 [dir=none]
+	140425088864144 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875199168 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875198160 -> 140424875199168
+	140424875198160 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875199888 -> 140424875198160
+	140424875197920 -> 140424875199168
+	140424875197920 [label=TBackward0]
+	140424875198640 -> 140424875197920
+	140424877170416 [label="videomae.encoder.layer.6.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877170416 -> 140424875198640
+	140424875198640 [label=AccumulateGrad]
+	140424875116000 -> 140424875115952
+	140424875116000 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875432688 -> 140424875116000
+	140424875432688 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875199936 -> 140424875432688
+	140424875199936 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875199840 -> 140424875199936
+	140424875199840 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875200416 -> 140424875199840
+	140424875200416 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875197824 -> 140424875200416
+	140424875197824 -> 140425088861504 [dir=none]
+	140425088861504 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875197824 -> 140425088863984 [dir=none]
+	140425088863984 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875197824 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875197296 -> 140424875197824
+	140424877363264 [label="videomae.encoder.layer.6.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877363264 -> 140424875197296
+	140424875197296 [label=AccumulateGrad]
+	140424875197392 -> 140424875197824
+	140424875197392 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875199888 -> 140424875197392
+	140424875200320 -> 140424875197824
+	140424875200320 [label=TBackward0]
+	140424875196624 -> 140424875200320
+	140424877170496 [label="videomae.encoder.layer.6.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877170496 -> 140424875196624
+	140424875196624 [label=AccumulateGrad]
+	140424875115184 -> 140424875115280
+	140424875115184 [label=TBackward0]
+	140424875199072 -> 140424875115184
+	140424877363344 [label="videomae.encoder.layer.6.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877363344 -> 140424875199072
+	140424875199072 [label=AccumulateGrad]
+	140424875115088 -> 140424875126160
+	140424875114992 -> 140424875114800
+	140424877363984 [label="videomae.encoder.layer.6.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877363984 -> 140424875114992
+	140424875114992 [label=AccumulateGrad]
+	140424875114944 -> 140424875114800
+	140424877364064 [label="videomae.encoder.layer.6.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877364064 -> 140424875114944
+	140424875114944 [label=AccumulateGrad]
+	140424875114560 -> 140424875126640
+	140424875114560 [label=TBackward0]
+	140424875198736 -> 140424875114560
+	140424877363504 [label="videomae.encoder.layer.6.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877363504 -> 140424875198736
+	140424875198736 [label=AccumulateGrad]
+	140424875126256 -> 140424875126352
+	140424875126256 [label=TBackward0]
+	140424875126688 -> 140424875126256
+	140424877363664 [label="videomae.encoder.layer.6.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877363664 -> 140424875126688
+	140424875126688 [label=AccumulateGrad]
+	140424875126160 -> 140424875123568
+	140424875126064 -> 140424875125872
+	140424877365024 [label="videomae.encoder.layer.7.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877365024 -> 140424875126064
+	140424875126064 [label=AccumulateGrad]
+	140424875126016 -> 140424875125872
+	140424877365104 [label="videomae.encoder.layer.7.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877365104 -> 140424875126016
+	140424875126016 [label=AccumulateGrad]
+	140424875125200 -> 140424875125680
+	140424875125200 [label=TBackward0]
+	140424875126112 -> 140424875125200
+	140424877364144 [label="videomae.encoder.layer.7.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877364144 -> 140424875126112
+	140424875126112 [label=AccumulateGrad]
+	140424875125104 -> 140424875125056
+	140424875125104 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875125440 -> 140424875125104
+	140424875125440 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875125632 -> 140424875125440
+	140424875125632 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875126496 -> 140424875125632
+	140424875126496 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875126304 -> 140424875126496
+	140424875126304 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125920 -> 140424875126304
+	140424875125920 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875197680 -> 140424875125920
+	140424875197680 -> 140425088861744 [dir=none]
+	140425088861744 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875197680 -> 140425088863584 [dir=none]
+	140425088863584 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875197680 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875196816 -> 140424875197680
+	140424875196816 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125872 -> 140424875196816
+	140424875199792 -> 140424875197680
+	140424875199792 [label=TBackward0]
+	140424875195600 -> 140424875199792
+	140424877364224 [label="videomae.encoder.layer.7.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877364224 -> 140424875195600
+	140424875195600 [label=AccumulateGrad]
+	140424875124480 -> 140424875124432
+	140424875124480 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875124816 -> 140424875124480
+	140424875124816 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875125008 -> 140424875124816
+	140424875125008 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875125344 -> 140424875125008
+	140424875125344 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125968 -> 140424875125344
+	140424875125968 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875126592 -> 140424875125968
+	140424875126592 -> 140425088860704 [dir=none]
+	140425088860704 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875126592 -> 140425088863104 [dir=none]
+	140425088863104 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875126592 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875125248 -> 140424875126592
+	140424877364464 [label="videomae.encoder.layer.7.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877364464 -> 140424875125248
+	140424875125248 [label=AccumulateGrad]
+	140424875124624 -> 140424875126592
+	140424875124624 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875125872 -> 140424875124624
+	140424875197728 -> 140424875126592
+	140424875197728 [label=TBackward0]
+	140424875196176 -> 140424875197728
+	140424877364304 [label="videomae.encoder.layer.7.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877364304 -> 140424875196176
+	140424875196176 [label=AccumulateGrad]
+	140424875123664 -> 140424875123760
+	140424875123664 [label=TBackward0]
+	140424875124192 -> 140424875123664
+	140424877364544 [label="videomae.encoder.layer.7.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877364544 -> 140424875124192
+	140424875124192 [label=AccumulateGrad]
+	140424875123568 -> 140424875085488
+	140424875123472 -> 140424875123280
+	140424877365184 [label="videomae.encoder.layer.7.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877365184 -> 140424875123472
+	140424875123472 [label=AccumulateGrad]
+	140424875123424 -> 140424875123280
+	140424877365264 [label="videomae.encoder.layer.7.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877365264 -> 140424875123424
+	140424875123424 [label=AccumulateGrad]
+	140424875122896 -> 140424875123088
+	140424875122896 [label=TBackward0]
+	140424875123520 -> 140424875122896
+	140424877364704 [label="videomae.encoder.layer.7.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877364704 -> 140424875123520
+	140424875123520 [label=AccumulateGrad]
+	140424875085584 -> 140424875085680
+	140424875085584 [label=TBackward0]
+	140424875123040 -> 140424875085584
+	140424877364864 [label="videomae.encoder.layer.7.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877364864 -> 140424875123040
+	140424875123040 [label=AccumulateGrad]
+	140424875085488 -> 140424875082896
+	140424875085392 -> 140424875085200
+	140424877366224 [label="videomae.encoder.layer.8.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424877366224 -> 140424875085392
+	140424875085392 [label=AccumulateGrad]
+	140424875085344 -> 140424875085200
+	140424877366304 [label="videomae.encoder.layer.8.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424877366304 -> 140424875085344
+	140424875085344 [label=AccumulateGrad]
+	140424875084528 -> 140424875085008
+	140424875084528 [label=TBackward0]
+	140424875085440 -> 140424875084528
+	140424877365344 [label="videomae.encoder.layer.8.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877365344 -> 140424875085440
+	140424875085440 [label=AccumulateGrad]
+	140424875084432 -> 140424875084384
+	140424875084432 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875084768 -> 140424875084432
+	140424875084768 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875084960 -> 140424875084768
+	140424875084960 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875085632 -> 140424875084960
+	140424875085632 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875085248 -> 140424875085632
+	140424875085248 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875123376 -> 140424875085248
+	140424875123376 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875122848 -> 140424875123376
+	140424875122848 -> 140425088861664 [dir=none]
+	140425088861664 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875122848 -> 140425088863664 [dir=none]
+	140425088863664 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875122848 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875123712 -> 140424875122848
+	140424875123712 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875085200 -> 140424875123712
+	140424875123904 -> 140424875122848
+	140424875123904 [label=TBackward0]
+	140424875123328 -> 140424875123904
+	140424877365424 [label="videomae.encoder.layer.8.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877365424 -> 140424875123328
+	140424875123328 [label=AccumulateGrad]
+	140424875083808 -> 140424875083760
+	140424875083808 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875084144 -> 140424875083808
+	140424875084144 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875084336 -> 140424875084144
+	140424875084336 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875084672 -> 140424875084336
+	140424875084672 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875085296 -> 140424875084672
+	140424875085296 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875084576 -> 140424875085296
+	140424875084576 -> 140425088860864 [dir=none]
+	140425088860864 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875084576 -> 140425088861024 [dir=none]
+	140425088861024 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875084576 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875083952 -> 140424875084576
+	140424877365664 [label="videomae.encoder.layer.8.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877365664 -> 140424875083952
+	140424875083952 [label=AccumulateGrad]
+	140424875123232 -> 140424875084576
+	140424875123232 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875085200 -> 140424875123232
+	140424875122752 -> 140424875084576
+	140424875122752 [label=TBackward0]
+	140424875124288 -> 140424875122752
+	140424877365504 [label="videomae.encoder.layer.8.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877365504 -> 140424875124288
+	140424875124288 [label=AccumulateGrad]
+	140424875082992 -> 140424875083088
+	140424875082992 [label=TBackward0]
+	140424875083520 -> 140424875082992
+	140424877365744 [label="videomae.encoder.layer.8.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877365744 -> 140424875083520
+	140424875083520 [label=AccumulateGrad]
+	140424875082896 -> 140424875433888
+	140424875082800 -> 140424875082608
+	140424877366384 [label="videomae.encoder.layer.8.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424877366384 -> 140424875082800
+	140424875082800 [label=AccumulateGrad]
+	140424875082752 -> 140424875082608
+	140424877366464 [label="videomae.encoder.layer.8.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424877366464 -> 140424875082752
+	140424875082752 [label=AccumulateGrad]
+	140424875082224 -> 140424875082416
+	140424875082224 [label=TBackward0]
+	140424875082848 -> 140424875082224
+	140424877365904 [label="videomae.encoder.layer.8.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877365904 -> 140424875082848
+	140424875082848 [label=AccumulateGrad]
+	140424875081840 -> 140424875081936
+	140424875081840 [label=TBackward0]
+	140424875082368 -> 140424875081840
+	140424877366064 [label="videomae.encoder.layer.8.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424877366064 -> 140424875082368
+	140424875082368 [label=AccumulateGrad]
+	140424875433888 -> 140425088849520
+	140424875433840 -> 140424875433648
+	140424875479264 [label="videomae.encoder.layer.9.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424875479264 -> 140424875433840
+	140424875433840 [label=AccumulateGrad]
+	140424875433792 -> 140424875433648
+	140424875479344 [label="videomae.encoder.layer.9.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424875479344 -> 140424875433792
+	140424875433792 [label=AccumulateGrad]
+	140424875433264 -> 140424875433456
+	140424875433264 [label=TBackward0]
+	140424875433744 -> 140424875433264
+	140424877366544 [label="videomae.encoder.layer.9.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877366544 -> 140424875433744
+	140424875433744 [label=AccumulateGrad]
+	140424875432832 -> 140424875433024
+	140424875432832 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875433408 -> 140424875432832
+	140424875433408 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140424875432928 -> 140424875433408
+	140424875432928 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140424875433600 -> 140424875432928
+	140424875433600 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875081888 -> 140424875433600
+	140424875081888 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875082704 -> 140424875081888
+	140424875082704 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875082176 -> 140424875082704
+	140424875082176 -> 140425088863744 [dir=none]
+	140425088863744 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875082176 -> 140425088863824 [dir=none]
+	140425088863824 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875082176 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875083040 -> 140424875082176
+	140424875083040 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875433648 -> 140424875083040
+	140424875083232 -> 140424875082176
+	140424875083232 [label=TBackward0]
+	140424875082656 -> 140424875083232
+	140424877366624 [label="videomae.encoder.layer.9.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877366624 -> 140424875082656
+	140424875082656 [label=AccumulateGrad]
+	140425088850288 -> 140425088851152
+	140425088850288 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424919857568 -> 140425088850288
+	140424919857568 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140424875433216 -> 140424919857568
+	140424875433216 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140424875433696 -> 140424875433216
+	140424875433696 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875433120 -> 140424875433696
+	140424875433120 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140424875082560 -> 140424875433120
+	140424875082560 -> 140425088862624 [dir=none]
+	140425088862624 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140424875082560 -> 140425088862544 [dir=none]
+	140425088862544 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140424875082560 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140424875083424 -> 140424875082560
+	140424877366864 [label="videomae.encoder.layer.9.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424877366864 -> 140424875083424
+	140424875083424 [label=AccumulateGrad]
+	140424875082080 -> 140424875082560
+	140424875082080 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140424875433648 -> 140424875082080
+	140424875082272 -> 140424875082560
+	140424875082272 [label=TBackward0]
+	140424875083376 -> 140424875082272
+	140424877366704 [label="videomae.encoder.layer.9.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877366704 -> 140424875083376
+	140424875083376 [label=AccumulateGrad]
+	140425088849904 -> 140425088849856
+	140425088849904 [label=TBackward0]
+	140425088850528 -> 140425088849904
+	140424877366944 [label="videomae.encoder.layer.9.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424877366944 -> 140425088850528
+	140425088850528 [label=AccumulateGrad]
+	140425088849520 -> 140425088848224
+	140425088849136 -> 140425088849280
+	140424875479424 [label="videomae.encoder.layer.9.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424875479424 -> 140425088849136
+	140425088849136 [label=AccumulateGrad]
+	140425088849088 -> 140425088849280
+	140424875479504 [label="videomae.encoder.layer.9.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424875479504 -> 140425088849088
+	140425088849088 [label=AccumulateGrad]
+	140425088848416 -> 140425088849328
+	140425088848416 [label=TBackward0]
+	140425088850768 -> 140425088848416
+	140424877367104 [label="videomae.encoder.layer.9.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424877367104 -> 140425088850768
+	140425088850768 [label=AccumulateGrad]
+	140425088848128 -> 140425088847984
+	140425088848128 [label=TBackward0]
+	140425088848560 -> 140425088848128
+	140424875479104 [label="videomae.encoder.layer.9.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424875479104 -> 140425088848560
+	140425088848560 [label=AccumulateGrad]
+	140425088848224 -> 140425088835840
+	140425088851008 -> 140425088851824
+	140424875480464 [label="videomae.encoder.layer.10.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424875480464 -> 140425088851008
+	140425088851008 [label=AccumulateGrad]
+	140425088851344 -> 140425088851824
+	140424875480544 [label="videomae.encoder.layer.10.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424875480544 -> 140425088851344
+	140425088851344 [label=AccumulateGrad]
+	140425088838480 -> 140425088839296
+	140425088838480 [label=TBackward0]
+	140425088850864 -> 140425088838480
+	140424875479584 [label="videomae.encoder.layer.10.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875479584 -> 140425088850864
+	140425088850864 [label=AccumulateGrad]
+	140425088838144 -> 140425088838000
+	140425088838144 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088839104 -> 140425088838144
+	140425088839104 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088839152 -> 140425088839104
+	140425088839152 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140425088838528 -> 140425088839152
+	140425088838528 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088847936 -> 140425088838528
+	140425088847936 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088849040 -> 140425088847936
+	140425088849040 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088848368 -> 140425088849040
+	140425088848368 -> 140425088863024 [dir=none]
+	140425088863024 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088848368 -> 140425088860784 [dir=none]
+	140425088860784 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088848368 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088849712 -> 140425088848368
+	140425088849712 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088851824 -> 140425088849712
+	140425088850096 -> 140425088848368
+	140425088850096 [label=TBackward0]
+	140425088848992 -> 140425088850096
+	140424875479664 [label="videomae.encoder.layer.10.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875479664 -> 140425088848992
+	140425088848992 [label=AccumulateGrad]
+	140425088837616 -> 140425088837376
+	140425088837616 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088837904 -> 140425088837616
+	140425088837904 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088837952 -> 140425088837904
+	140425088837952 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088838576 -> 140425088837952
+	140425088838576 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088838960 -> 140425088838576
+	140425088838960 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088848704 -> 140425088838960
+	140425088848704 -> 140425088862784 [dir=none]
+	140425088862784 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088848704 -> 140425088861264 [dir=none]
+	140425088861264 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088848704 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088848800 -> 140425088848704
+	140424875479904 [label="videomae.encoder.layer.10.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424875479904 -> 140425088848800
+	140425088848800 [label=AccumulateGrad]
+	140425088851392 -> 140425088848704
+	140425088851392 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088851824 -> 140425088851392
+	140425088851056 -> 140425088848704
+	140425088851056 [label=TBackward0]
+	140425088850624 -> 140425088851056
+	140424875479744 [label="videomae.encoder.layer.10.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875479744 -> 140425088850624
+	140425088850624 [label=AccumulateGrad]
+	140425088835888 -> 140425088836224
+	140425088835888 [label=TBackward0]
+	140425088836656 -> 140425088835888
+	140424875479984 [label="videomae.encoder.layer.10.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875479984 -> 140425088836656
+	140425088836656 [label=AccumulateGrad]
+	140425088835840 -> 140425088814768
+	140425091899152 -> 140424956252064
+	140424875480624 [label="videomae.encoder.layer.10.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424875480624 -> 140425091899152
+	140425091899152 [label=AccumulateGrad]
+	140425088837184 -> 140424956252064
+	140424875480704 [label="videomae.encoder.layer.10.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424875480704 -> 140425088837184
+	140425088837184 [label=AccumulateGrad]
+	140424956251824 -> 140424956177568
+	140424956251824 [label=TBackward0]
+	140425091898960 -> 140424956251824
+	140424875480144 [label="videomae.encoder.layer.10.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424875480144 -> 140425091898960
+	140425091898960 [label=AccumulateGrad]
+	140425091681344 -> 140425088814912
+	140425091681344 [label=TBackward0]
+	140424956177904 -> 140425091681344
+	140424875480304 [label="videomae.encoder.layer.10.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424875480304 -> 140424956177904
+	140424956177904 [label=AccumulateGrad]
+	140425088814768 -> 140425088811264
+	140425088814576 -> 140425088814336
+	140424875481664 [label="videomae.encoder.layer.11.layernorm_before.weight
+ (768)" fillcolor=lightblue]
+	140424875481664 -> 140425088814576
+	140425088814576 [label=AccumulateGrad]
+	140425088814528 -> 140425088814336
+	140424875481744 [label="videomae.encoder.layer.11.layernorm_before.bias
+ (768)" fillcolor=lightblue]
+	140424875481744 -> 140425088814528
+	140425088814528 [label=AccumulateGrad]
+	140425088813040 -> 140425088813952
+	140425088813040 [label=TBackward0]
+	140425088814960 -> 140425088813040
+	140424875480784 [label="videomae.encoder.layer.11.attention.attention.query.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875480784 -> 140425088814960
+	140425088814960 [label=AccumulateGrad]
+	140425088813088 -> 140425088813568
+	140425088813088 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425091762160 -> 140425088813088
+	140425091762160 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 64, 1568)"]
+	140425088813760 -> 140425091762160
+	140425088813760 [label="TransposeBackward0
+--------------------------
+dim0: 18446744073709551615
+dim1: 18446744073709551614"]
+	140425088814720 -> 140425088813760
+	140425088814720 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088815008 -> 140425088814720
+	140425088815008 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088813424 -> 140425088815008
+	140425088813424 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088835648 -> 140425088813424
+	140425088835648 -> 140425088860944 [dir=none]
+	140425088860944 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088835648 -> 140425088863184 [dir=none]
+	140425088863184 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088835648 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088837232 -> 140425088835648
+	140425088837232 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088814336 -> 140425088837232
+	140425088836992 -> 140425088835648
+	140425088836992 [label=TBackward0]
+	140425088836848 -> 140425088836992
+	140424875480864 [label="videomae.encoder.layer.11.attention.attention.key.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875480864 -> 140425088836848
+	140425088836848 [label=AccumulateGrad]
+	140425088811888 -> 140425088812272
+	140425088811888 [label="ReshapeAliasBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088812608 -> 140425088811888
+	140425088812608 [label="ExpandBackward0
+-----------------------------
+self_sizes: (1, 12, 1568, 64)"]
+	140425088812800 -> 140425088812608
+	140425088812800 [label="PermuteBackward0
+------------------
+dims: (0, 2, 1, 3)"]
+	140425088813280 -> 140425088812800
+	140425088813280 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088814192 -> 140425088813280
+	140425088814192 [label="ViewBackward0
+-----------------------
+self_sizes: (1568, 768)"]
+	140425088814864 -> 140425088814192
+	140425088814864 -> 140425088861984 [dir=none]
+	140425088861984 [label="mat1
+ (1568, 768)" fillcolor=orange]
+	140425088814864 -> 140425088860624 [dir=none]
+	140425088860624 [label="mat2
+ (768, 768)" fillcolor=orange]
+	140425088814864 [label="AddmmBackward0
+----------------------------
+alpha       :              1
+beta        :              1
+mat1        : [saved tensor]
+mat1_sizes  :    (1568, 768)
+mat1_strides:       (768, 1)
+mat2        : [saved tensor]
+mat2_sizes  :     (768, 768)
+mat2_strides:       (1, 768)"]
+	140425088812224 -> 140425088814864
+	140424875481104 [label="videomae.encoder.layer.11.attention.attention.v_bias
+ (768)" fillcolor=lightblue]
+	140424875481104 -> 140425088812224
+	140425088812224 [label=AccumulateGrad]
+	140425088835696 -> 140425088814864
+	140425088835696 [label="ViewBackward0
+--------------------------
+self_sizes: (1, 1568, 768)"]
+	140425088814336 -> 140425088835696
+	140425088837040 -> 140425088814864
+	140425088837040 [label=TBackward0]
+	140425088837712 -> 140425088837040
+	140424875480944 [label="videomae.encoder.layer.11.attention.attention.value.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875480944 -> 140425088837712
+	140425088837712 [label=AccumulateGrad]
+	140425088811072 -> 140425088811168
+	140425088811072 [label=TBackward0]
+	140425088811648 -> 140425088811072
+	140424875481184 [label="videomae.encoder.layer.11.attention.output.dense.weight
+ (768, 768)" fillcolor=lightblue]
+	140424875481184 -> 140425088811648
+	140425088811648 [label=AccumulateGrad]
+	140425088811264 -> 140425088805760
+	140425089063232 -> 140425089063424
+	140424875481824 [label="videomae.encoder.layer.11.layernorm_after.weight
+ (768)" fillcolor=lightblue]
+	140424875481824 -> 140425089063232
+	140425089063232 [label=AccumulateGrad]
+	140425089063808 -> 140425089063424
+	140424875481904 [label="videomae.encoder.layer.11.layernorm_after.bias
+ (768)" fillcolor=lightblue]
+	140424875481904 -> 140425089063808
+	140425089063808 [label=AccumulateGrad]
+	140425089061120 -> 140425091186544
+	140425089061120 [label=TBackward0]
+	140425089063136 -> 140425089061120
+	140424875481344 [label="videomae.encoder.layer.11.intermediate.dense.weight
+ (3072, 768)" fillcolor=lightblue]
+	140424875481344 -> 140425089063136
+	140425089063136 [label=AccumulateGrad]
+	140425088805856 -> 140425088803984
+	140425088805856 [label=TBackward0]
+	140425091183856 -> 140425088805856
+	140424875481504 [label="videomae.encoder.layer.11.output.dense.weight
+ (768, 3072)" fillcolor=lightblue]
+	140424875481504 -> 140425091183856
+	140425091183856 [label=AccumulateGrad]
+	140425088805760 -> 140425088804656
+	140425088804992 -> 140425088805568
+	140424875481984 [label="fc_norm.weight
+ (768)" fillcolor=lightblue]
+	140424875481984 -> 140425088804992
+	140425088804992 [label=AccumulateGrad]
+	140425088804416 -> 140425088805568
+	140424875482064 [label="fc_norm.bias
+ (768)" fillcolor=lightblue]
+	140424875482064 -> 140425088804416
+	140425088804416 [label=AccumulateGrad]
+	140425088804896 -> 140425088803072
+	140425088804896 [label=TBackward0]
+	140425090293712 -> 140425088804896
+	140424875482144 [label="classifier.weight
+ (400, 768)" fillcolor=lightblue]
+	140424875482144 -> 140425090293712
+	140425090293712 [label=AccumulateGrad]
+	140425088803072 -> 140425088732512
+}
